@@ -79,6 +79,8 @@ When creating a new version file (e.g., v25.json), open config.json to append yo
   }
 }
 ```
+
+Example:
 ```Example 
 {
   "en": {
