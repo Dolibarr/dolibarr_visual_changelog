@@ -29,7 +29,7 @@ To ensure scalable collaboration and avoid giant, unmaintainable JSON files, the
         ├── 📁 en/          # English interface screenshots
         ├── 📁 fr/          # French interface screenshots
         └── 📁 es/          # Spanish interface screenshots
-
+```
 ---
 
 ## 🧩 Version Data File Structure (vXX.json)
@@ -78,7 +78,7 @@ When creating a new version file (e.g., v25.json), open config.json to append yo
     "regressions_alertes": []
   }
 }
-
+```
 ```Example 
 {
   "en": {
@@ -148,3 +148,4 @@ When creating a new version file (e.g., v25.json), open config.json to append yo
     "regressions_alertes": []
   }
 }
+```
