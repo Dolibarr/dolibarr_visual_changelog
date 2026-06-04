@@ -23,10 +23,128 @@ To ensure scalable collaboration and avoid giant, unmaintainable JSON files, the
 📁 dolibarr-visual-changelog/
 │── 📄 index.html          # Main web interface & dynamic rendering script logic
 │── 📄 config.json         # Global settings, list of active versions, and UI translations
-│── 📄 v23.json            # Standalone feature datasets specific to version 23
-│── 📄 v24.json            # Standalone feature datasets specific to version 24
+│── 📄 vXX.json            # Standalone feature datasets specific to version XX
 └── 📁 img/                 # Root asset folder for feature screenshots
-    └── 📁 v24/             # Subfolder specific to Dolibarr version 24
+    └── 📁 vXX/             # Subfolder specific to Dolibarr version XX
         ├── 📁 en/          # English interface screenshots
         ├── 📁 fr/          # French interface screenshots
         └── 📁 es/          # Spanish interface screenshots
+
+---
+
+## 🧩 Version Data File Structure (vXX.json)
+
+To add a new version or contribute to an existing one, you need to follow a strict JSON schema. These files are split by language codes and then sub-divided by functional business categories.
+
+📋 Data Fields Schema
+
+Every object added inside a category array must contain these three fields :
+Key | Type | Description
+
+- [Required] text           | string |          The commercial title of the feature. Avoid technical jargon or issue numbers (e.g., do not use #12345).
+
+- [Required] description    | string |          A clear description of what the feature does and how it benefits the end user.
+
+- [Required] image          | string / null |   The relative path to the screenshot (img/vXX/lang/filename.png). Must be set to null if no image is available.
+
+## 📂 Blank Template Blueprint
+
+When creating a new version file (e.g., v25.json), open config.json to append your new version tag to the "versions_disponibles" index, then copy and paste this empty template to start coding:
+
+```text
+{
+  "en": {
+    "ia_innovation": [],
+    "compta_facturation": [],
+    "ventes_logistique": [],
+    "rh_salaires": [],
+    "ui_ergonomie": [],
+    "regressions_alertes": []
+  },
+  "fr": {
+    "ia_innovation": [],
+    "compta_facturation": [],
+    "ventes_logistique": [],
+    "rh_salaires": [],
+    "ui_ergonomie": [],
+    "regressions_alertes": []
+  },
+  "es": {
+    "ia_innovation": [],
+    "compta_facturation": [],
+    "ventes_logistique": [],
+    "rh_salaires": [],
+    "ui_ergonomie": [],
+    "regressions_alertes": []
+  }
+}
+
+```Example 
+{
+  "en": {
+    "ia_innovation": [
+      {
+        "text": "Automated Email Drafts",
+        "description": "The AI assistant can now write context-aware email replies directly from your commercial proposals.",
+        "image": "img/v25/en/ai_email_draft.png"
+      }
+    ],
+    "compta_facturation": [
+      {
+        "text": "Multi-Currency Stripe Integration",
+        "description": "Customers can now pay their invoices online using their local currency with real-time conversion rates.",
+        "image": null
+      }
+    ],
+    "ventes_logistique": [],
+    "rh_salaires": [],
+    "ui_ergonomie": [],
+    "regressions_alertes": [
+      {
+        "text": "Deprecating Old PDF Engine",
+        "description": "The legacy PDF generation system has been removed. Ensure your custom modules use the new system.",
+        "image": null
+      }
+    ]
+  },
+  "fr": {
+    "ia_innovation": [
+      {
+        "text": "Brouillons d'emails automatisés",
+        "description": "L'assistant IA peut désormais rédiger des propositions de réponses à vos emails directement depuis vos devis.",
+        "image": "img/v25/fr/ai_email_draft.png"
+      }
+    ],
+    "compta_facturation": [
+      {
+        "text": "Intégration Stripe Multi-Devises",
+        "description": "Vos clients peuvent désormais régler leurs factures en ligne dans leur devise locale avec un taux de conversion en temps réel.",
+        "image": null
+      }
+    ],
+    "ventes_logistique": [],
+    "rh_salaires": [],
+    "ui_ergonomie": [],
+    "regressions_alertes": [
+      {
+        "text": "Suppression de l'ancien moteur PDF",
+        "description": "L'ancien système de génération PDF a été retiré. Vérifiez que vos modules personnalisés utilisent le nouveau moteur.",
+        "image": null
+      }
+    ]
+  },
+  "es": {
+    "ia_innovation": [
+      {
+        "text": "Borradores de Email Automatizados",
+        "description": "El asistente de IA ahora puede redactar respuestas de correo electrónico basadas en el contexto directamente desde sus presupuestos.",
+        "image": "img/v25/es/ai_email_draft.png"
+      }
+    ],
+    "compta_facturation": [],
+    "ventes_logistique": [],
+    "rh_salaires": [],
+    "ui_ergonomie": [],
+    "regressions_alertes": []
+  }
+}
