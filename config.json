@@ -1,0 +1,50 @@
+{
+  "versions_disponibles": ["v24", "v23"],
+  "traductions": {
+    "fr": {
+      "categories": {
+        "ia_innovation": "🤖 Intelligence Artificielle & Innovation",
+        "compta_facturation": "🧮 Comptabilité & Facturation",
+        "ventes_logistique": "📦 Ventes, Stocks & Expéditions",
+        "rh_salaires": "👥 Ressources Humaines & Salaires",
+        "ui_ergonomie": "🎨 Interface & Ergonomie (UI/UX)",
+        "regressions_alertes": "⚠️ Changements Importants & Alertes"
+      },
+      "labels": {
+        "title": "Nouveautés de Dolibarr",
+        "version_select": "Choisir une version :",
+        "lang_select": "Langue :"
+      }
+    },
+    "en": {
+      "categories": {
+        "ia_innovation": "🤖 Artificial Intelligence & Innovation",
+        "compta_facturation": "🧮 Accounting & Invoicing",
+        "ventes_logistique": "📦 Sales, Stock & Shipping",
+        "rh_salaires": "👥 Human Resources & Salaries",
+        "ui_ergonomie": "🎨 Interface & Ergonomics (UI/UX)",
+        "regressions_alertes": "⚠️ Important Changes & Warnings"
+      },
+      "labels": {
+        "title": "Dolibarr What's New",
+        "version_select": "Select a version:",
+        "lang_select": "Language:"
+      }
+    },
+    "es": {
+      "categories": {
+        "ia_innovation": "🤖 Inteligencia Artificial e Innovación",
+        "compta_facturation": "🧮 Contabilidad y Facturación",
+        "ventes_logistique": "📦 Ventas, Stock y Envíos",
+        "rh_salaires": "👥 Recursos Humanos y Salarios",
+        "ui_ergonomie": "🎨 Interfaz y Ergonomía (UI/UX)",
+        "regressions_alertes": "⚠️ Cambios Importantes y Alertas"
+      },
+      "labels": {
+        "title": "Novedades de Dolibarr",
+        "version_select": "Seleccionar versión:",
+        "lang_select": "Idioma:"
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dolibarr - Changelog Visuel</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #333; }
+        .selectors { display: flex; gap: 20px; background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 30px; }
+        .select-group { display: flex; flex-direction: column; }
+        select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px; margin-top: 5px; }
+        .feature-card { border-left: 4px solid #264a7f; padding-left: 15px; margin: 20px 0; }
+        .feature-title { font-weight: bold; font-size: 1.1em; margin: 0 0 5px 0; }
+        .feature-desc { color: #666; font-size: 0.95em; margin: 0 0 10px 0; line-height: 1.4; }
+        .feature-img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #264a7f; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <h1 id="page-title">Nouveautés de Dolibarr</h1>
+
+    <div class="selectors">
+        <div class="select-group">
+            <label id="lbl-version" for="versionSelect">Version :</label>
+            <select id="versionSelect" onchange="loadVersionData()"></select>
+        </div>
+        <div class="select-group">
+            <label id="lbl-lang" for="langSelect">Langue :</label>
+            <select id="langSelect" onchange="renderChangelog()"></select>
+        </div>
+    </div>
+
+    <!-- Container where the dynamic content will be injected -->
+    <div id="changelog-content"></div>
+
+    <script>
+        let config = {};       // Stores global configuration and interface translations
+        let currentVersionData = {}; // Stores the features content of the currently selected version
+
+        // 1. Fetch and load the global configuration file on startup
+        fetch('config.json')
+            .then(response => response.json())
+            .then(jsonConfig => {
+                config = jsonConfig;
+                initInterfaceSelectors();
+                loadVersionData(); // Automatically load the first available version
+            })
+            .catch(error => {
+                console.error("Error loading configuration file:", error);
+            });
+
+        // 2. Populate language dropdown and available versions dynamically from config
+        function initInterfaceSelectors() {
+            const versionSelect = document.getElementById('versionSelect');
+            const langSelect = document.getElementById('langSelect');
+
+            // Populate versions
+            config.versions_disponibles.forEach(v => {
+                let option = document.createElement('option');
+                option.value = v;
+                option.textContent = `${v}`;
+                versionSelect.appendChild(option);
+            });
+
+            // Populate languages based on config data fields
+            Object.keys(config.traductions).forEach(langCode => {
+                let option = document.createElement('option');
+                option.value = langCode;
+                // Capitalize first option text letter nicely
+                option.textContent = langCode.toUpperCase() + ` (${config.traductions[langCode].labels.title.split(' ')[0]})`;
+                if (langCode === 'en') option.selected = true; // Set English as default fallback
+                langSelect.appendChild(option);
+            });
+        }
+
+        // 3. Dynamic Fetch: Load the specific JSON file for the chosen version
+        function loadVersionData() {
+            const version = document.getElementById('versionSelect').value;
+            const contentDiv = document.getElementById('changelog-content');
+            
+            contentDiv.innerHTML = "<p>Loading release notes...</p>";
+
+            // Fetch the standalone version file (e.g., v24.json)
+            fetch(`${version}.json`)
+                .then(response => {
+                    if (!response.ok) throw new Error(`File ${version}.json not found`);
+                    return response.json();
+                })
+                .then(versionData => {
+                    currentVersionData = versionData;
+                    renderChangelog();
+                })
+                .catch(error => {
+                    console.error("Error loading version data:", error);
+                    contentDiv.innerHTML = `<p style="color:red;">Error: Could not load data for version ${version}.</p>`;
+                });
+        }
+
+        // 4. Render the changelog structure layout on the screen
+        function renderChangelog() {
+            const lang = document.getElementById('langSelect').value;
+            const contentDiv = document.getElementById('changelog-content');
+            
+            // Translate static interface UI labels from global config
+            document.getElementById('page-title').textContent = config.traductions[lang].labels.title;
+            document.getElementById('lbl-version').textContent = config.traductions[lang].labels.version_select;
+            document.getElementById('lbl-lang').textContent = config.traductions[lang].labels.lang_select;
+
+            // Clear container before injecting new content
+            contentDiv.innerHTML = ""; 
+
+            // Safe check to verify if selected language exists inside the active version dataset
+            const contentLanguage = currentVersionData[lang];
+            if (!contentLanguage) {
+                contentDiv.innerHTML = "<p>No translation available for this language in this version.</p>";
+                return;
+            }
+
+            // Loop through each business category defined inside the configuration
+            for (const [catKey, catItems] of Object.entries(contentLanguage)) {
+                if (catItems.length === 0) continue;
+
+                // Create and append the category title layout component
+                const catTitle = config.traductions[lang].categories[catKey] || catKey;
+                const h2 = document.createElement('h2');
+                h2.textContent = catTitle;
+                contentDiv.appendChild(h2);
+
+                // Build and append each feature item inside the current category
+                catItems.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'feature-card';
+                    
+                    let cardHTML = `<p class="feature-title">${item.text}</p>`;
+                    
+                    if (item.description) {
+                        cardHTML += `<p class="feature-desc">${item.description}</p>`;
+                    }
+                    
+                    card.innerHTML = cardHTML;
+                    
+                    if (item.image) {
+                        const img = document.createElement('img');
+                        img.src = item.image;
+                        img.className = 'feature-img';
+                        img.alt = item.text;
+                        card.appendChild(img);
+                    }
+                    
+                    contentDiv.appendChild(card);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
