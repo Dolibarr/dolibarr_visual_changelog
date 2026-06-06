@@ -2,7 +2,7 @@
 
 A lightweight, multi-language, and user-friendly visual changelog viewer for Dolibarr ERP/CRM. 
 
-This project transforms raw, technical developer changelogs into clear, organized, and benefit-driven release notes for end-users and administrators. It features dynamic version file loading, multi-language support (English, French, Spanish), and screenshot preview integrations.
+This project transforms raw, technical developer changelogs into clear, organized, and benefit-driven release notes for end-users and administrators. It features dynamic version file loading, multi-language support (English, French, Greek, Spanish), and screenshot preview integrations.
 
 ---
 
