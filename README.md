@@ -1,6 +1,6 @@
 # Dolibarr Visual Changelog
 
-A lightweight, multi-language, and user-friendly visual changelog viewer for Dolibarr ERP/CRM. 
+A lightweight, multi-language, and user-friendly visual changelog viewer for Dolibarr ERP/CRM.
 
 This project transforms raw, technical developer changelogs into clear, organized, and benefit-driven release notes for end-users and administrators. It features dynamic version file loading, multi-language support (English, French, Greek, Spanish), and screenshot preview integrations.
 
@@ -8,146 +8,253 @@ This project transforms raw, technical developer changelogs into clear, organize
 
 ## 🚀 Purpose
 
-Dolibarr releases come with comprehensive but raw text changelogs that can be overwhelming for non-technical users. This tool reads a modular structured dataset to display key features sorted by business categories (Accounting, HR, Sales, AI, etc.) with explicit descriptions and visual previews, helping teams understand **what actually changes** in their daily software usage.
+Dolibarr releases often include long technical changelogs that can be difficult to read for non-technical users. This tool presents the main changes in a visual format, grouped by business category, with translated titles, descriptions, screenshots, and optional links to the full GitHub changelog or YouTube videos.
 
 ---
 
-## 📂 Project Structure & Architecture
+## 📂 Project Structure
 
-To ensure scalable collaboration and avoid giant, unmaintainable JSON files, the data layer is completely decoupled. 
-
-* **`config.json`** acts as the core configuration file, handling the list of active versions and localized interface/category titles.
-* **`vXX.json`** files are standalone, independent datasets containing the actual release notes for that specific version. They are loaded dynamically by the browser only when selected.
+The project is designed to keep interface configuration separate from version content.
 
 ```text
 📁 dolibarr-visual-changelog/
-│── 📄 index.html          # Main web interface & dynamic rendering script logic
-│── 📄 config.json         # Global settings, list of active versions, and UI translations
-│── 📄 vXX.json            # Standalone feature datasets specific to version XX
-└── 📁 img/                 # Root asset folder for feature screenshots
-    └── 📁 vXX/             # Subfolder specific to Dolibarr version XX
-        ├── 📁 en/          # English interface screenshots
-        ├── 📁 fr/          # French interface screenshots
-        └── 📁 es/          # Spanish interface screenshots
+│── 📄 index.html              # Main web interface and rendering logic
+│── 📄 config.json             # Global settings, version list, UI translations, category labels
+│── 📄 v23.json        # Normalized dataset for Dolibarr v23
+│── 📄 v24.json        # Normalized dataset for Dolibarr v24
+│── 📄 vXX.json        # Normalized dataset for a future version
+└── 📁 img/                    # Root asset folder for screenshots
+    └── 📁 vXX/
+        ├── 📁 en/
+        ├── 📁 fr/
+        └── 📁 es/
 ```
+
+### Files overview
+
+- **`config.json`** stores the active versions, category labels, and static interface translations.
+- **`vXX.json`** stores the release content for one version using the new normalized structure.
+- **`index.html`** dynamically loads the selected version file, groups changes by category, and renders the selected language.
+
 ---
 
-## 🧩 Version Data File Structure (vXX.json)
+## 🧩 New version structure
 
-To add a new version or contribute to an existing one, you need to follow a strict JSON schema. These files are split by language codes and then sub-divided by functional business categories.
+Each version file is now structured around a single `changes` array. A change exists only once and contains its technical metadata, tags, translations, links, and images.
 
-📋 Data Fields Schema
+### Root structure
 
-Every object added inside a category array must contain these three fields :
-Key | Type | Description
-
-- [Required] text           | string |          The commercial title of the feature. Avoid technical jargon or issue numbers (e.g., do not use #12345).
-
-- [Required] description    | string |          A clear description of what the feature does and how it benefits the end user.
-
-- [Required] image          | string / null |   The relative path to the screenshot (img/vXX/lang/filename.png). Must be set to null if no image is available.
-
-## 📂 Blank Template Blueprint
-
-When creating a new version file (e.g., v25.json), open config.json to append your new version tag to the "versions_disponibles" index, then copy and paste this empty template to start coding:
-
-```text
+```json
 {
-  "en": {
-    "ia_innovation": [],
-    "compta_facturation": [],
-    "ventes_logistique": [],
-    "rh_salaires": [],
-    "ui_ergonomie": [],
-    "regressions_alertes": []
+  "version": "v25",
+  "links": {
+    "github": "https://github.com/Dolibarr/dolibarr/releases/tag/25.0.0",
+    "youtube": [
+      {
+        "label": "Présentation générale",
+        "url": "https://www.youtube.com/watch?v=xxxx"
+      }
+    ]
   },
+  "changes": []
+}
+```
+
+### Change object structure
+
+Each item in `changes` follows this structure:
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | Yes | Stable technical identifier, for example `v25-001`. |
+| `order` | integer | Yes | Display order in the interface. |
+| `release` | string | Yes | Version identifier, for example `v25`. |
+| `tags` | array of strings | Yes | One or more functional categories, for example `ia_innovation`. |
+| `links` | array | No | Optional links specific to this change. |
+| `images` | object | No | Screenshot paths by language, or a shared `default` image. |
+| `translations` | object | Yes | Titles and descriptions by language. |
+
+### Translation block
+
+```json
+"translations": {
   "fr": {
-    "ia_innovation": [],
-    "compta_facturation": [],
-    "ventes_logistique": [],
-    "rh_salaires": [],
-    "ui_ergonomie": [],
-    "regressions_alertes": []
+    "title": "Brouillons d'emails automatisés",
+    "description": "L'assistant IA peut désormais rédiger des réponses email contextuelles directement à partir des propositions commerciales."
+  },
+  "en": {
+    "title": "Automated Email Drafts",
+    "description": "The AI assistant can now write context-aware email replies directly from your commercial proposals."
   },
   "es": {
-    "ia_innovation": [],
-    "compta_facturation": [],
-    "ventes_logistique": [],
-    "rh_salaires": [],
-    "ui_ergonomie": [],
-    "regressions_alertes": []
+    "title": "Borradores automáticos de correos",
+    "description": "El asistente de IA ahora puede redactar respuestas de correo contextualizadas directamente desde sus propuestas comerciales."
   }
 }
 ```
+
+### Image block
+
+If screenshots differ by language:
+
+```json
+"images": {
+  "fr": "img/v25/fr/ai_email_draft.png",
+  "en": "img/v25/en/ai_email_draft.png",
+  "es": "img/v25/es/ai_email_draft.png"
+}
+```
+
+If the same screenshot is shared across all languages:
+
+```json
+"images": {
+  "default": "img/v25/common/ai_email_draft.png"
+}
+```
+
+If no screenshot is available:
+
+```json
+"images": {
+  "default": null
+}
+```
+
+### Change-level links
+
+Each change may also include its own optional links.
+
+```json
+"links": [
+  {
+    "label": "GitHub PR",
+    "url": "https://github.com/Dolibarr/dolibarr/pull/12345"
+  },
+  {
+    "label": "Demo video",
+    "url": "https://www.youtube.com/watch?v=yyyy"
+  }
+]
+```
+
+---
+
+## 📋 Recommended categories
+
+Category keys remain defined in `config.json` and reused in `tags`:
+
+- `ia_innovation`
+- `compta_facturation`
+- `ventes_logistique`
+- `rh_salaires`
+- `ui_ergonomie`
+- `regressions_alertes`
+
+These keys are technical identifiers. Their translated labels are managed only in `config.json`.
+
+---
+
+## 📂 Template for a new version file
+
+When creating a new release file such as `v25.json`, first add `v25` to `versions_available` in `config.json`, then use the template below.
+
+```json
+{
+  "version": "v25",
+  "links": {
+    "github": null,
+    "youtube": []
+  },
+  "changes": [
+    {
+      "id": "v25-001",
+      "order": 1,
+      "release": "v25",
+      "tags": ["ia_innovation"],
+      "links": [],
+      "images": {
+        "fr": "img/v25/fr/ai_email_draft.png",
+        "en": "img/v25/en/ai_email_draft.png",
+        "es": "img/v25/es/ai_email_draft.png"
+      },
+      "translations": {
+        "fr": {
+          "title": "Brouillons d'emails automatisés",
+          "description": "L'assistant IA peut désormais rédiger des réponses email contextuelles directement à partir des propositions commerciales."
+        },
+        "en": {
+          "title": "Automated Email Drafts",
+          "description": "The AI assistant can now write context-aware email replies directly from your commercial proposals."
+        },
+        "es": {
+          "title": "Borradores automáticos de correos",
+          "description": "El asistente de IA ahora puede redactar respuestas de correo contextualizadas directamente desde sus propuestas commerciales."
+        }
+      }
+    }
+  ]
+}
+```
+
+---
+
+## 🖥️ Front-end behavior
+
+The updated `index.html` works with the normalized structure and adds several new capabilities:
+
+- Dynamic loading of `vXX.json` files.
+- Fallback compatibility with the legacy `vXX.json` structure.
+- Grouping of `changes` by category using `tags`.
+- Rendering of translations using `translations[lang]`.
+- Image fallback with `images[lang]` or `images.default`.
+- Display of the technical ID for each change.
+- External links to the full GitHub changelog and one or more YouTube videos.
+- Optional per-change links displayed inside cards.
+
+---
+
+## 🔧 config.json role
+
+`config.json` remains the central UI configuration file. It should contain:
+
+- `versions_available`
+- translated category labels
+- translated interface labels
 
 Example:
-```Example 
+
+```json
 {
-  "en": {
-    "ia_innovation": [
-      {
-        "text": "Automated Email Drafts",
-        "description": "The AI assistant can now write context-aware email replies directly from your commercial proposals.",
-        "image": "img/v25/en/ai_email_draft.png"
+  "versions_available": ["v24", "v23"],
+  "translations": {
+    "fr": {
+      "categories": {
+        "ia_innovation": "🤖 Intelligence Artificielle & Innovation"
+      },
+      "labels": {
+        "title": "Nouveautés de Dolibarr",
+        "version_select": "Choisir une version :",
+        "lang_select": "Langue :",
+        "full_changelog": "Changelog complet",
+        "videos": "Vidéos",
+        "watch_video": "Voir la vidéo",
+        "external_links": "Liens",
+        "technical_id": "ID"
       }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Multi-Currency Stripe Integration",
-        "description": "Customers can now pay their invoices online using their local currency with real-time conversion rates.",
-        "image": null
-      }
-    ],
-    "ventes_logistique": [],
-    "rh_salaires": [],
-    "ui_ergonomie": [],
-    "regressions_alertes": [
-      {
-        "text": "Deprecating Old PDF Engine",
-        "description": "The legacy PDF generation system has been removed. Ensure your custom modules use the new system.",
-        "image": null
-      }
-    ]
-  },
-  "fr": {
-    "ia_innovation": [
-      {
-        "text": "Brouillons d'emails automatisés",
-        "description": "L'assistant IA peut désormais rédiger des propositions de réponses à vos emails directement depuis vos devis.",
-        "image": "img/v25/fr/ai_email_draft.png"
-      }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Intégration Stripe Multi-Devises",
-        "description": "Vos clients peuvent désormais régler leurs factures en ligne dans leur devise locale avec un taux de conversion en temps réel.",
-        "image": null
-      }
-    ],
-    "ventes_logistique": [],
-    "rh_salaires": [],
-    "ui_ergonomie": [],
-    "regressions_alertes": [
-      {
-        "text": "Suppression de l'ancien moteur PDF",
-        "description": "L'ancien système de génération PDF a été retiré. Vérifiez que vos modules personnalisés utilisent le nouveau moteur.",
-        "image": null
-      }
-    ]
-  },
-  "es": {
-    "ia_innovation": [
-      {
-        "text": "Borradores de Email Automatizados",
-        "description": "El asistente de IA ahora puede redactar respuestas de correo electrónico basadas en el contexto directamente desde sus presupuestos.",
-        "image": "img/v25/es/ai_email_draft.png"
-      }
-    ],
-    "compta_facturation": [],
-    "ventes_logistique": [],
-    "rh_salaires": [],
-    "ui_ergonomie": [],
-    "regressions_alertes": []
+    }
   }
 }
 ```
+
+## ✅ Authoring rules
+
+To keep the dataset consistent:
+
+- Use one unique `id` per change.
+- Keep `tags` technical and stable.
+- Store all translations inside `translations`, never in separate top-level language trees.
+- Keep `order` explicit to avoid accidental display changes.
+- Use `null` when no screenshot exists.
+- Always use relative paths for images.
+- Use `target="_blank"` links only for external resources.

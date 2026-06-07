@@ -1,6 +1,6 @@
 {
-  "versions_disponibles": ["v24", "v23"],
-  "traductions": {
+  "versions_available": ["v24", "v23"],
+  "translations": {
     "fr": {
       "categories": {
         "ia_innovation": "🤖 Intelligence Artificielle & Innovation",
