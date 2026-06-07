@@ -345,7 +345,7 @@
             let order = 1;
             const langs = Object.keys(data || {}).filter(key => ['fr', 'en', 'es'].includes(key));
             const firstLang = langs[0];
-            if (!firstLang) return { version: '', schema_version: 1, links: { github: null, youtube: [] }, changes: [] };
+            if (!firstLang) return { version: '', links: { github: null, youtube: [] }, changes: [] };
 
             Object.entries(data[firstLang]).forEach(([category, items]) => {
                 items.forEach((item, index) => {
@@ -377,7 +377,6 @@
 
             return {
                 version: document.getElementById('versionSelect').value,
-                schema_version: 1,
                 links: { github: null, youtube: [] },
                 changes
             };
