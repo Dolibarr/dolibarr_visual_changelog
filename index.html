@@ -2,24 +2,202 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Dolibarr - Changelog Visuel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolibarr - Changelog Visual</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #333; }
-        .selectors { display: flex; gap: 20px; background: #f5f5f5; padding: 15px; border-radius: 8px; margin-bottom: 30px; }
-        .select-group { display: flex; flex-direction: column; }
-        select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px; margin-top: 5px; }
-        .feature-card { border-left: 4px solid #264a7f; padding-left: 15px; margin: 20px 0; }
-        .feature-title { font-weight: bold; font-size: 1.1em; margin: 0 0 5px 0; }
-        .feature-desc { color: #666; font-size: 0.95em; margin: 0 0 10px 0; line-height: 1.4; }
-        .feature-img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #264a7f; border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+        :root {
+            --bg: #f6f8fb;
+            --surface: #ffffff;
+            --surface-alt: #eef3f8;
+            --text: #1f2937;
+            --muted: #5b6472;
+            --primary: #264a7f;
+            --primary-dark: #1c355c;
+            --border: #d8e0ea;
+            --shadow: 0 8px 24px rgba(38, 74, 127, 0.08);
+            --radius: 14px;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            color: var(--primary);
+        }
+
+        .page-intro {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            margin-bottom: 22px;
+            align-items: end;
+        }
+
+        .select-group {
+            display: flex;
+            flex-direction: column;
+            min-width: 180px;
+            gap: 6px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        select {
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #fff;
+            font-size: 15px;
+        }
+
+        .external-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+            align-items: center;
+        }
+
+        .external-links-label {
+            color: var(--muted);
+            font-weight: 700;
+            margin-right: 2px;
+        }
+
+        .external-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .external-link:hover {
+            background: var(--surface-alt);
+            color: var(--primary-dark);
+        }
+
+        .category-section {
+            margin-top: 34px;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #dfe7f0;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            margin: 18px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            background: var(--surface-alt);
+            color: var(--primary);
+        }
+
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.12rem;
+            margin: 0 0 8px 0;
+        }
+
+        .feature-desc {
+            color: var(--muted);
+            font-size: 0.97rem;
+            margin: 0 0 12px 0;
+        }
+
+        .feature-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0 14px;
+        }
+
+        .feature-img {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-top: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .empty-state, .error-state {
+            padding: 18px;
+            border-radius: var(--radius);
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .error-state {
+            color: #a12626;
+            border-color: #e4b8b8;
+            background: #fff5f5;
+        }
+
+        @media (max-width: 700px) {
+            body { padding: 22px 14px 40px; }
+            .toolbar { flex-direction: column; align-items: stretch; }
+            .select-group { min-width: auto; }
+        }
     </style>
 </head>
 <body>
-
     <h1 id="page-title">Nouveautés de Dolibarr</h1>
+    <p id="page-intro" class="page-intro">Parcourez les évolutions majeures de chaque version avec un affichage visuel et multilingue.</p>
 
-    <div class="selectors">
+    <div class="toolbar">
         <div class="select-group">
             <label id="lbl-version" for="versionSelect">Version :</label>
             <select id="versionSelect" onchange="loadVersionData()"></select>
@@ -30,125 +208,321 @@
         </div>
     </div>
 
-    <!-- Container where the dynamic content will be injected -->
+    <div id="external-links" class="external-links"></div>
     <div id="changelog-content"></div>
 
     <script>
-        let config = {};       // Stores global configuration and interface translations
-        let currentVersionData = {}; // Stores the features content of the currently selected version
+        let config = {};
+        let currentVersionData = {};
 
-        // 1. Fetch and load the global configuration file on startup
+        const defaultUiLabels = {
+            fr: {
+                intro: "Parcourez les évolutions majeures de chaque version avec un affichage visuel et multilingue.",
+                loading: "Chargement des nouveautés...",
+                error_loading: "Erreur : impossible de charger les données pour la version",
+                no_translation: "Aucune traduction disponible pour cette langue dans cette version.",
+                no_content: "Aucune nouveauté à afficher pour cette version.",
+                full_changelog: "Changelog complet",
+                videos: "Vidéos",
+                watch_video: "Voir la vidéo",
+                technical_id: "ID",
+                external_links: "Liens"
+            },
+            en: {
+                intro: "Browse the main improvements of each release with a visual and multilingual presentation.",
+                loading: "Loading release notes...",
+                error_loading: "Error: could not load data for version",
+                no_translation: "No translation available for this language in this version.",
+                no_content: "No feature to display for this version.",
+                full_changelog: "Full changelog",
+                videos: "Videos",
+                watch_video: "Watch video",
+                technical_id: "ID",
+                external_links: "Links"
+            },
+            es: {
+                intro: "Explore las principales novedades de cada versión con una presentación visual y multilingüe.",
+                loading: "Cargando novedades...",
+                error_loading: "Error: no se pudieron cargar los datos de la versión",
+                no_translation: "No hay traducción disponible para este idioma en esta versión.",
+                no_content: "No hay novedades para mostrar en esta versión.",
+                full_changelog: "Changelog completo",
+                videos: "Vídeos",
+                watch_video: "Ver vídeo",
+                technical_id: "ID",
+                external_links: "Enlaces"
+            }
+        };
+
         fetch('config.json')
             .then(response => response.json())
             .then(jsonConfig => {
                 config = jsonConfig;
                 initInterfaceSelectors();
-                loadVersionData(); // Automatically load the first available version
+                loadVersionData();
             })
             .catch(error => {
-                console.error("Error loading configuration file:", error);
+                console.error('Error loading configuration file:', error);
+                document.getElementById('changelog-content').innerHTML = '<div class="error-state">Configuration loading error.</div>';
             });
 
-        // 2. Populate language dropdown and available versions dynamically from config
+        function getCurrentLang() {
+            return document.getElementById('langSelect').value || 'fr';
+        }
+
+        function getUiLabels(lang) {
+            const configLabels = config?.translations?.[lang]?.labels || {};
+            return {
+                ...defaultUiLabels[lang],
+                ...configLabels
+            };
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
         function initInterfaceSelectors() {
             const versionSelect = document.getElementById('versionSelect');
             const langSelect = document.getElementById('langSelect');
 
-            // Populate versions
-            config.versions_disponibles.forEach(v => {
-                let option = document.createElement('option');
+            versionSelect.innerHTML = '';
+            (config.versions_available || []).forEach(v => {
+                const option = document.createElement('option');
                 option.value = v;
-                option.textContent = `${v}`;
+                option.textContent = v;
                 versionSelect.appendChild(option);
             });
 
-            // Populate languages based on config data fields
-            Object.keys(config.traductions).forEach(langCode => {
-                let option = document.createElement('option');
+            langSelect.innerHTML = '';
+            Object.keys(config.translations || {}).forEach(langCode => {
+                const option = document.createElement('option');
                 option.value = langCode;
-                // Capitalize first option text letter nicely
-                option.textContent = langCode.toUpperCase() + ` (${config.traductions[langCode].labels.title.split(' ')[0]})`;
-                if (langCode === 'en') option.selected = true; // Set English as default fallback
+                option.textContent = langCode.toUpperCase();
+                if (langCode === 'fr') option.selected = true;
                 langSelect.appendChild(option);
             });
         }
 
-        // 3. Dynamic Fetch: Load the specific JSON file for the chosen version
         function loadVersionData() {
             const version = document.getElementById('versionSelect').value;
             const contentDiv = document.getElementById('changelog-content');
-            
-            contentDiv.innerHTML = "<p>Loading release notes...</p>";
+            const labels = getUiLabels(getCurrentLang());
+            contentDiv.innerHTML = `<div class="empty-state">${escapeHtml(labels.loading)}</div>`;
 
-            // Fetch the standalone version file (e.g., v24.json)
-            fetch(`${version}.json`)
+            const candidates = [`${version}.schema2.json`, `${version}.json`];
+            loadVersionFromCandidates(candidates, 0, version);
+        }
+
+        function loadVersionFromCandidates(candidates, index, version) {
+            const contentDiv = document.getElementById('changelog-content');
+            const labels = getUiLabels(getCurrentLang());
+
+            if (index >= candidates.length) {
+                contentDiv.innerHTML = `<div class="error-state">${escapeHtml(labels.error_loading)} ${escapeHtml(version)}.</div>`;
+                return;
+            }
+
+            fetch(candidates[index])
                 .then(response => {
-                    if (!response.ok) throw new Error(`File ${version}.json not found`);
+                    if (!response.ok) throw new Error(`File ${candidates[index]} not found`);
                     return response.json();
                 })
                 .then(versionData => {
                     currentVersionData = versionData;
                     renderChangelog();
                 })
-                .catch(error => {
-                    console.error("Error loading version data:", error);
-                    contentDiv.innerHTML = `<p style="color:red;">Error: Could not load data for version ${version}.</p>`;
-                });
+                .catch(() => loadVersionFromCandidates(candidates, index + 1, version));
         }
 
-        // 4. Render the changelog structure layout on the screen
+        function normalizeOldSchema(data) {
+            const changes = [];
+            let order = 1;
+            const langs = Object.keys(data || {}).filter(key => ['fr', 'en', 'es'].includes(key));
+            const firstLang = langs[0];
+            if (!firstLang) return { version: '', schema_version: 1, links: { github: null, youtube: [] }, changes: [] };
+
+            Object.entries(data[firstLang]).forEach(([category, items]) => {
+                items.forEach((item, index) => {
+                    const translations = {};
+                    const images = {};
+                    langs.forEach(lang => {
+                        const sourceItem = data?.[lang]?.[category]?.[index];
+                        if (sourceItem) {
+                            translations[lang] = {
+                                title: sourceItem.text || '',
+                                description: sourceItem.description || ''
+                            };
+                            if (sourceItem.image) images[lang] = sourceItem.image;
+                        }
+                    });
+                    if (Object.keys(images).length === 0) images.default = null;
+                    changes.push({
+                        id: `legacy-${String(order).padStart(3, '0')}`,
+                        order,
+                        release: document.getElementById('versionSelect').value,
+                        tags: [category],
+                        links: [],
+                        images,
+                        translations
+                    });
+                    order += 1;
+                });
+            });
+
+            return {
+                version: document.getElementById('versionSelect').value,
+                schema_version: 1,
+                links: { github: null, youtube: [] },
+                changes
+            };
+        }
+
+        function getNormalizedData() {
+            if (currentVersionData && Array.isArray(currentVersionData.changes)) {
+                return currentVersionData;
+            }
+            return normalizeOldSchema(currentVersionData || {});
+        }
+
+        function renderExternalLinks(data, lang, labels) {
+            const container = document.getElementById('external-links');
+            container.innerHTML = '';
+
+            const links = data?.links || {};
+            const html = [];
+
+            if (links.github) {
+                html.push(`
+                    <a class="external-link" href="${escapeHtml(links.github)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels.full_changelog)}</a>
+                `);
+            }
+
+            if (Array.isArray(links.youtube) && links.youtube.length) {
+                links.youtube.forEach(video => {
+                    const label = video.label || labels.watch_video;
+                    if (video.url) {
+                        html.push(`
+                            <a class="external-link" href="${escapeHtml(video.url)}" target="_blank" rel="noopener noreferrer">▶ ${escapeHtml(label)}</a>
+                        `);
+                    }
+                });
+            }
+
+            if (html.length) {
+                container.innerHTML = `<span class="external-links-label">${escapeHtml(labels.external_links)} :</span>${html.join('')}`;
+            }
+        }
+
+        function getImageForLang(images, lang) {
+            if (!images) return null;
+            return images[lang] || images.default || null;
+        }
+
+        function groupChangesByCategory(changes) {
+            const grouped = {};
+            changes.forEach(change => {
+                (change.tags || []).forEach(tag => {
+                    if (!grouped[tag]) grouped[tag] = [];
+                    grouped[tag].push(change);
+                });
+            });
+            return grouped;
+        }
+
         function renderChangelog() {
-            const lang = document.getElementById('langSelect').value;
+            const lang = getCurrentLang();
+            const labels = getUiLabels(lang);
             const contentDiv = document.getElementById('changelog-content');
-            
-            // Translate static interface UI labels from global config
-            document.getElementById('page-title').textContent = config.traductions[lang].labels.title;
-            document.getElementById('lbl-version').textContent = config.traductions[lang].labels.version_select;
-            document.getElementById('lbl-lang').textContent = config.traductions[lang].labels.lang_select;
+            const normalizedData = getNormalizedData();
 
-            // Clear container before injecting new content
-            contentDiv.innerHTML = ""; 
+            document.documentElement.lang = lang;
+            document.getElementById('page-title').textContent = config?.translations?.[lang]?.labels?.title || 'Dolibarr changelog';
+            document.getElementById('lbl-version').textContent = config?.translations?.[lang]?.labels?.version_select || 'Version';
+            document.getElementById('lbl-lang').textContent = config?.translations?.[lang]?.labels?.lang_select || 'Language';
+            document.getElementById('page-intro').textContent = labels.intro;
 
-            // Safe check to verify if selected language exists inside the active version dataset
-            const contentLanguage = currentVersionData[lang];
-            if (!contentLanguage) {
-                contentDiv.innerHTML = "<p>No translation available for this language in this version.</p>";
+            renderExternalLinks(normalizedData, lang, labels);
+            contentDiv.innerHTML = '';
+
+            const changes = Array.isArray(normalizedData.changes) ? [...normalizedData.changes] : [];
+            if (!changes.length) {
+                contentDiv.innerHTML = `<div class="empty-state">${escapeHtml(labels.no_content)}</div>`;
                 return;
             }
 
-            // Loop through each business category defined inside the configuration
-            for (const [catKey, catItems] of Object.entries(contentLanguage)) {
-                if (catItems.length === 0) continue;
+            changes.sort((a, b) => (a.order || 0) - (b.order || 0));
+            const grouped = groupChangesByCategory(changes);
+            const orderedCategories = Object.keys(config?.translations?.[lang]?.categories || {});
 
-                // Create and append the category title layout component
-                const catTitle = config.traductions[lang].categories[catKey] || catKey;
-                const h2 = document.createElement('h2');
-                h2.textContent = catTitle;
-                contentDiv.appendChild(h2);
+            let hasRenderableContent = false;
 
-                // Build and append each feature item inside the current category
-                catItems.forEach(item => {
-                    const card = document.createElement('div');
+            orderedCategories.forEach(catKey => {
+                const catItems = grouped[catKey] || [];
+                const renderableItems = catItems.filter(item => item?.translations?.[lang] || item?.translations?.fr || item?.translations?.en || item?.translations?.es);
+                if (!renderableItems.length) return;
+
+                hasRenderableContent = true;
+                const section = document.createElement('section');
+                section.className = 'category-section';
+
+                const title = document.createElement('h2');
+                title.textContent = config?.translations?.[lang]?.categories?.[catKey] || catKey;
+                section.appendChild(title);
+
+                renderableItems.forEach(item => {
+                    const localized = item.translations?.[lang] || item.translations?.fr || item.translations?.en || item.translations?.es;
+                    const image = getImageForLang(item.images, lang);
+                    const links = Array.isArray(item.links) ? item.links : [];
+
+                    const card = document.createElement('article');
                     card.className = 'feature-card';
-                    
-                    let cardHTML = `<p class="feature-title">${item.text}</p>`;
-                    
-                    if (item.description) {
-                        cardHTML += `<p class="feature-desc">${item.description}</p>`;
+
+                    let html = `
+                        <div class="feature-meta">
+                            <span class="chip">${escapeHtml(labels.technical_id)}: ${escapeHtml(item.id || '')}</span>
+                        </div>
+                        <p class="feature-title">${escapeHtml(localized?.title || '')}</p>
+                    `;
+
+                    if (localized?.description) {
+                        html += `<p class="feature-desc">${escapeHtml(localized.description)}</p>`;
                     }
-                    
-                    card.innerHTML = cardHTML;
-                    
-                    if (item.image) {
+
+                    if (links.length) {
+                        html += '<div class="feature-links">';
+                        links.forEach(link => {
+                            if (link?.url) {
+                                html += `<a class="external-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label || labels.external_links)}</a>`;
+                            }
+                        });
+                        html += '</div>';
+                    }
+
+                    card.innerHTML = html;
+
+                    if (image) {
                         const img = document.createElement('img');
-                        img.src = item.image;
+                        img.src = image;
                         img.className = 'feature-img';
-                        img.alt = item.text;
+                        img.alt = localized?.title || item.id || 'feature image';
+                        img.loading = 'lazy';
                         card.appendChild(img);
                     }
-                    
-                    contentDiv.appendChild(card);
+
+                    section.appendChild(card);
                 });
+
+                contentDiv.appendChild(section);
+            });
+
+            if (!hasRenderableContent) {
+                contentDiv.innerHTML = `<div class="empty-state">${escapeHtml(labels.no_translation)}</div>`;
             }
         }
     </script>

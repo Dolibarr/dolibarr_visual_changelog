@@ -1,314 +1,496 @@
 {
-  "fr": {
-    "ia_innovation": [
-      {
-        "text": "Mise à niveau technique globale",
-        "description": "Dolibarr requiert désormais PHP 7.2 comme version minimale pour fonctionner, garantissant de meilleures performances et une sécurité accrue.",
-        "image": null
-      },
-      {
-        "text": "Évolution du module DataPolicy",
-        "description": "Le module de politique des données passe au statut stable, offrant des fonctionnalités avancées d'anonymisation et de gestion du recrutement.",
-        "image": "img/v23/fr/datapolicy.png"
-      }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Comptabilité par type de paiement",
-        "description": "Une nouvelle option permet de segmenter vos écritures comptables et vos journaux directement en fonction des modes de paiement utilisés.",
-        "image": "img/v23/fr/accounting_payments.png"
-      },
-      {
-        "text": "Prise en charge comptable des remises",
-        "description": "Le système intègre désormais un suivi comptable dédié pour la gestion des remises accordées.",
-        "image": null
-      },
-      {
-        "text": "Rapprochement sur compte de comptabilité générale",
-        "description": "Ajout des structures nécessaires pour effectuer des rapprochements directement sur les comptes généraux.",
-        "image": null
-      },
-      {
-        "text": "Affichage du solde client sur la facture PDF",
-        "description": "Il est désormais possible d'afficher automatiquement le solde actuel du client à la date d'émission directement sur le document PDF de la facture.",
-        "image": "img/v23/fr/invoice_balance_pdf.png"
-      }
-    ],
-    "ventes_logistique": [
-      {
-        "text": "Blocage des produits hors vente ou hors achat",
-        "description": "Le système lève désormais une erreur si vous tentez de valider une proposition, une commande ou un document fournisseur contenant un produit qui n'est plus ouvert à la vente ou à l'achat.",
-        "image": null
-      },
-      {
-        "text": "Création de réceptions et d'expéditions autonomes",
-        "description": "Vous pouvez maintenant générer des bons de réception ou des expéditions simples de manière totalement autonome, sans avoir besoin d'un document d'origine.",
-        "image": "img/v23/fr/standalone_shipment.png"
-      },
-      {
-        "text": "Signature électronique sur les expéditions",
-        "description": "Le module d'expédition s'enrichit d'une fonctionnalité permettant de faire signer numériquement les bons de livraison.",
-        "image": "img/v23/fr/shipment_sign.png"
-      },
-      {
-        "text": "Mise à jour des Incoterms 2025",
-        "description": "Les codes Incoterms ont été mis à jour pour s'aligner sur les normes officielles de 2025 avec l'intégration de nouveaux termes.",
-        "image": null
-      }
-    ],
-    "rh_salaires": [
-      {
-        "text": "Configuration du menu de feuille de temps (Timesheet)",
-        "description": "Ajout d'une option de configuration pour définir un menu d'accès par défaut aux feuilles de temps des collaborateurs.",
-        "image": null
-      },
-      {
-        "text": "Tri et historique des congés",
-        "description": "Il est désormais possible de trier le solde des congés par employé et d'accéder directement à un lien vers l'historique des modifications.",
-        "image": "img/v23/fr/holiday_history.png"
-      }
-    ],
-    "ui_ergonomie": [
-      {
-        "text": "Messagerie et Agenda intégrés aux objets",
-        "description": "Les onglets 'Messagerie' et 'Agenda' font leur apparition directement sur les fiches de commandes, d'expéditions et de propositions commerciales pour centraliser les échanges.",
-        "image": "img/v23/fr/object_agenda.png"
-      },
-      {
-        "text": "Vue Kanban avec affichage du logo d'entreprise",
-        "description": "La vue en colonnes (Kanban) devient plus visuelle en affichant directement le logo des entreprises sur les cartes.",
-        "image": "img/v23/fr/kanban_logo.png"
-      },
-      {
-        "text": "Amélioration du Web Portal client",
-        "description": "Le portail web s'enrichit d'un explorateur de fichiers pour les documents partagés et permet le partage direct des documents liés aux tiers.",
-        "image": null
-      },
-      {
-        "text": "Widget 'Entonnoir d'opportunités'",
-        "description": "Un nouveau widget graphique sous forme de tunnel de conversion est disponible sur le tableau de bord pour suivre vos opportunités commerciales.",
-        "image": "img/v23/fr/crm_funnel.png"
-      }
-    ],
-    "regressions_alertes": [
-      {
-        "text": "Changement de comportement sur la date par défaut",
-        "description": "La logique de création des propositions, commandes et factures a été inversée : le système requiert désormais une option pour NE PAS pré-remplir automatiquement la date du jour.",
-        "image": null
-      },
-      {
-        "text": "Paramètre requis pour l'édition PHP dans le module Sites Web",
-        "description": "Si vous utilisez des pages PHP dans le module de site web, vous devez impérativement ajouter une variable de sécurité spécifique dans votre fichier de configuration pour conserver les droits d'édition.",
-        "image": null
-      }
-    ]
+  "version": "v23",
+  "schema_version": 2,
+  "links": {
+    "github": null,
+    "youtube": []
   },
-  "en": {
-    "ia_innovation": [
-      {
-        "text": "Global Technical Upgrade",
-        "description": "Dolibarr now strictly requires PHP 7.2 as a minimum version to guarantee better performance and modern platform security.",
-        "image": null
+  "changes": [
+    {
+      "id": "v23-001",
+      "order": 1,
+      "release": "v23",
+      "tags": [
+        "ia_innovation"
+      ],
+      "links": [],
+      "images": {
+        "default": null
       },
-      {
-        "text": "DataPolicy Module Evolution",
-        "description": "The data policy management tool has been moved to stable status, introducing advanced anonymization features and recruitment policy setups.",
-        "image": "img/v23/en/datapolicy.png"
+      "translations": {
+        "fr": {
+          "title": "Mise à niveau technique globale",
+          "description": "Dolibarr requiert désormais PHP 7.2 comme version minimale pour fonctionner, garantissant de meilleures performances et une sécurité accrue."
+        },
+        "en": {
+          "title": "Global Technical Upgrade",
+          "description": "Dolibarr now strictly requires PHP 7.2 as a minimum version to guarantee better performance and modern platform security."
+        },
+        "es": {
+          "title": "Actualización Técnica Global",
+          "description": "Dolibarr ahora requiere estrictamente un entorno mínimo de PHP 7.2 para funcionar, garantizando un mejor rendimiento y mayor seguridad."
+        }
       }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Accounting by Payment Type",
-        "description": "A brand new option allows users to segment accounting ledger lines and journals based specifically on payment methods.",
-        "image": "img/v23/en/accounting_payments.png"
+    },
+    {
+      "id": "v23-002",
+      "order": 2,
+      "release": "v23",
+      "tags": [
+        "ia_innovation"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/datapolicy.png",
+        "en": "img/v23/en/datapolicy.png",
+        "es": "img/v23/es/datapolicy.png"
       },
-      {
-        "text": "Accounting Traces for Discounts",
-        "description": "The system now natively supports a dedicated accounting configuration and ledger distribution for client discounts.",
-        "image": null
-      },
-      {
-        "text": "General Accounting Reconciliation",
-        "description": "Added essential database structures to enable native reconciliation routines directly within general ledger accounts.",
-        "image": null
-      },
-      {
-        "text": "Customer Balance Layout on PDF Invoices",
-        "description": "You can now configure PDF generation to automatically print the customer's current outstanding balance directly on the invoice document.",
-        "image": "img/v23/en/invoice_balance_pdf.png"
+      "translations": {
+        "fr": {
+          "title": "Évolution du module DataPolicy",
+          "description": "Le module de politique des données passe au statut stable, offrant des fonctionnalités avancées d'anonymisation et de gestion du recrutement."
+        },
+        "en": {
+          "title": "DataPolicy Module Evolution",
+          "description": "The data policy management tool has been moved to stable status, introducing advanced anonymization features and recruitment policy setups."
+        },
+        "es": {
+          "title": "Evolución del Módulo DataPolicy",
+          "description": "La herramienta de gestión de políticas de datos pasa a estado estable, ofreciendo opciones avanzadas de anonimización y gestión de políticas de contratación."
+        }
       }
-    ],
-    "ventes_logistique": [
-      {
-        "text": "Validation Error for Out-of-Sale Products",
-        "description": "Dolibarr will now block validation and raise an error if a commercial proposal, order, or supplier document contains an item that is no longer flagged for sale or purchase.",
-        "image": null
+    },
+    {
+      "id": "v23-003",
+      "order": 3,
+      "release": "v23",
+      "tags": [
+        "compta_facturation"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/accounting_payments.png",
+        "en": "img/v23/en/accounting_payments.png",
+        "es": "img/v23/es/accounting_payments.png"
       },
-      {
-        "text": "Standalone Shipments and Receptions",
-        "description": "You can now create direct reception records or product shipments independently, without needing a source commercial document.",
-        "image": "img/v23/en/standalone_shipment.png"
-      },
-      {
-        "text": "Digital Signature Support on Shipments",
-        "description": "The shipments flow gets updated with a dedicated signature capture tool to sign delivery sheets electronically.",
-        "image": "img/v23/en/shipment_sign.png"
-      },
-      {
-        "text": "Incoterms 2025 Standards Update",
-        "description": "Incoterms have been updated to fully comply with standard 2025 definitions, alongside the introduction of new global terms.",
-        "image": null
+      "translations": {
+        "fr": {
+          "title": "Comptabilité par type de paiement",
+          "description": "Une nouvelle option permet de segmenter vos écritures comptables et vos journaux directement en fonction des modes de paiement utilisés."
+        },
+        "en": {
+          "title": "Accounting by Payment Type",
+          "description": "A brand new option allows users to segment accounting ledger lines and journals based specifically on payment methods."
+        },
+        "es": {
+          "title": "Contabilidad por Tipo de Pago",
+          "description": "Una nueva funcionalidad permite segmentar los asientos contables y diarios directamente en función de las formas de pago utilizadas."
+        }
       }
-    ],
-    "rh_salaires": [
-      {
-        "text": "Default Timesheet Menu Customization",
-        "description": "A new global parameter has been implemented to define a customized default navigation path for user timesheets.",
-        "image": null
+    },
+    {
+      "id": "v23-004",
+      "order": 4,
+      "release": "v23",
+      "tags": [
+        "compta_facturation"
+      ],
+      "links": [],
+      "images": {
+        "default": null
       },
-      {
-        "text": "Employee Leave Filtering & History Links",
-        "description": "Enhanced holiday balance lists featuring native employee filtering and a quick link to inspect balance modification logs.",
-        "image": "img/v23/en/holiday_history.png"
+      "translations": {
+        "fr": {
+          "title": "Prise en charge comptable des remises",
+          "description": "Le système intègre désormais un suivi comptable dédié pour la gestion des remises accordées."
+        },
+        "en": {
+          "title": "Accounting Traces for Discounts",
+          "description": "The system now natively supports a dedicated accounting configuration and ledger distribution for client discounts."
+        },
+        "es": {
+          "title": "Soporte Contable para Descuentos",
+          "description": "El sistema ahora incorpora de forma nativa la asignación y el control contable específico para los descuentos aplicados."
+        }
       }
-    ],
-    "ui_ergonomie": [
-      {
-        "text": "Integrated Object Messaging and Agenda Tabs",
-        "description": "Dedicated 'Messaging' and 'Agenda' tabs are now integrated into orders, shipments, and proposals cards to centralize customer context.",
-        "image": "img/v23/en/object_agenda.png"
+    },
+    {
+      "id": "v23-005",
+      "order": 5,
+      "release": "v23",
+      "tags": [
+        "compta_facturation"
+      ],
+      "links": [],
+      "images": {
+        "default": null
       },
-      {
-        "text": "Company Logo Display inside Kanban Views",
-        "description": "The kanban board view layout has been redesigned to visibly show company logos on active element cards.",
-        "image": "img/v23/en/kanban_logo.png"
-      },
-      {
-        "text": "Enhanced Client Web Portal Features",
-        "description": "The client portal expands its feature set with an integrated shared directory navigator and direct access to linked thirdparty documents.",
-        "image": null
-      },
-      {
-        "text": "Opportunities Conversion Funnel Widget",
-        "description": "A clean conversion funnel graphic widget is now available for your home dashboard to efficiently track CRM opportunities.",
-        "image": "img/v23/en/crm_funnel.png"
+      "translations": {
+        "fr": {
+          "title": "Rapprochement sur compte de comptabilité générale",
+          "description": "Ajout des structures nécessaires pour effectuer des rapprochements directement sur les comptes généraux."
+        },
+        "en": {
+          "title": "General Accounting Reconciliation",
+          "description": "Added essential database structures to enable native reconciliation routines directly within general ledger accounts."
+        },
+        "es": {
+          "title": "Conciliación en Cuentas Contables Generales",
+          "description": "Se añaden las estructuras de base de datos necesarias para permitir rutinas de conciliación directamente en cuentas de contabilidad general."
+        }
       }
-    ],
-    "regressions_alertes": [
-      {
-        "text": "Inverted Creation Date Validation Logic",
-        "description": "Proposal, order, and invoice processing has inverted its date pre-filling logic: an option is now required to NOT automatically fill today's date.",
-        "image": null
+    },
+    {
+      "id": "v23-006",
+      "order": 6,
+      "release": "v23",
+      "tags": [
+        "compta_facturation"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/invoice_balance_pdf.png",
+        "en": "img/v23/en/invoice_balance_pdf.png",
+        "es": "img/v23/es/invoice_balance_pdf.png"
       },
-      {
-        "text": "Custom PHP Restriction within Website Module",
-        "description": "If you host custom PHP scripts via the CMS/Website module, you must manually add a new security toggle inside your configuration file to keep editing rights.",
-        "image": null
+      "translations": {
+        "fr": {
+          "title": "Affichage du solde client sur la facture PDF",
+          "description": "Il est désormais possible d'afficher automatiquement le solde actuel du client à la date d'émission directement sur le document PDF de la facture."
+        },
+        "en": {
+          "title": "Customer Balance Layout on PDF Invoices",
+          "description": "You can now configure PDF generation to automatically print the customer's current outstanding balance directly on the invoice document."
+        },
+        "es": {
+          "title": "Visualización del Saldo del Cliente en PDF",
+          "description": "Es posible configurar las facturas impresas para que muestren de forma automática el saldo pendiente actual del cliente en la propia fecha de emisión."
+        }
       }
-    ]
-  },
-  "es": {
-    "ia_innovation": [
-      {
-        "text": "Actualización Técnica Global",
-        "description": "Dolibarr ahora requiere estrictamente un entorno mínimo de PHP 7.2 para funcionar, garantizando un mejor rendimiento y mayor seguridad.",
-        "image": null
+    },
+    {
+      "id": "v23-007",
+      "order": 7,
+      "release": "v23",
+      "tags": [
+        "ventes_logistique"
+      ],
+      "links": [],
+      "images": {
+        "default": null
       },
-      {
-        "text": "Evolución del Módulo DataPolicy",
-        "description": "La herramienta de gestión de políticas de datos pasa a estado estable, ofreciendo opciones avanzadas de anonimización y gestión de políticas de contratación.",
-        "image": "img/v23/es/datapolicy.png"
+      "translations": {
+        "fr": {
+          "title": "Blocage des produits hors vente ou hors achat",
+          "description": "Le système lève désormais une erreur si vous tentez de valider une proposition, une commande ou un document fournisseur contenant un produit qui n'est plus ouvert à la vente ou à l'achat."
+        },
+        "en": {
+          "title": "Validation Error for Out-of-Sale Products",
+          "description": "Dolibarr will now block validation and raise an error if a commercial proposal, order, or supplier document contains an item that is no longer flagged for sale or purchase."
+        },
+        "es": {
+          "title": "Error al Validar Productos fuera de Venta/Compra",
+          "description": "Dolibarr bloqueará la validación e indicará un error si un presupuesto, pedido o documento de proveedor contiene un artículo que ya no está disponible para la venta o compra."
+        }
       }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Contabilidad por Tipo de Pago",
-        "description": "Una nueva funcionalidad permite segmentar los asientos contables y diarios directamente en función de las formas de pago utilizadas.",
-        "image": "img/v23/es/accounting_payments.png"
+    },
+    {
+      "id": "v23-008",
+      "order": 8,
+      "release": "v23",
+      "tags": [
+        "ventes_logistique"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/standalone_shipment.png",
+        "en": "img/v23/en/standalone_shipment.png",
+        "es": "img/v23/es/standalone_shipment.png"
       },
-      {
-        "text": "Soporte Contable para Descuentos",
-        "description": "El sistema ahora incorpora de forma nativa la asignación y el control contable específico para los descuentos aplicados.",
-        "image": null
-      },
-      {
-        "text": "Conciliación en Cuentas Contables Generales",
-        "description": "Se añaden las estructuras de base de datos necesarias para permitir rutinas de conciliación directamente en cuentas de contabilidad general.",
-        "image": null
-      },
-      {
-        "text": "Visualización del Saldo del Cliente en PDF",
-        "description": "Es posible configurar las facturas impresas para que muestren de forma automática el saldo pendiente actual del cliente en la propia fecha de emisión.",
-        "image": "img/v23/es/invoice_balance_pdf.png"
+      "translations": {
+        "fr": {
+          "title": "Création de réceptions et d'expéditions autonomes",
+          "description": "Vous pouvez maintenant générer des bons de réception ou des expéditions simples de manière totalement autonome, sans avoir besoin d'un document d'origine."
+        },
+        "en": {
+          "title": "Standalone Shipments and Receptions",
+          "description": "You can now create direct reception records or product shipments independently, without needing a source commercial document."
+        },
+        "es": {
+          "title": "Creación de Envíos y Recepciones Autónomas",
+          "description": "Ahora puede generar registros de recepción o albaranes de envío de forma totalmente independiente, sin necesidad de un documento origen."
+        }
       }
-    ],
-    "ventes_logistique": [
-      {
-        "text": "Error al Validar Productos fuera de Venta/Compra",
-        "description": "Dolibarr bloqueará la validación e indicará un error si un presupuesto, pedido o documento de proveedor contiene un artículo que ya no está disponible para la venta o compra.",
-        "image": null
+    },
+    {
+      "id": "v23-009",
+      "order": 9,
+      "release": "v23",
+      "tags": [
+        "ventes_logistique"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/shipment_sign.png",
+        "en": "img/v23/en/shipment_sign.png",
+        "es": "img/v23/es/shipment_sign.png"
       },
-      {
-        "text": "Creación de Envíos y Recepciones Autónomas",
-        "description": "Ahora puede generar registros de recepción o albaranes de envío de forma totalmente independiente, sin necesidad de un documento origen.",
-        "image": "img/v23/es/standalone_shipment.png"
-      },
-      {
-        "text": "Soporte de Firma Digital en Envíos",
-        "description": "El flujo de expediciones se actualiza con una funcionalidad de captura de firma para validar las entregas de material de forma electrónica.",
-        "image": "img/v23/es/shipment_sign.png"
-      },
-      {
-        "text": "Actualización de Estándares Incoterms 2025",
-        "description": "Se han actualizado las definiciones de códigos Incoterms para cumplir con la normativa oficial de 2025, incorporando nuevos términos comerciales.",
-        "image": null
+      "translations": {
+        "fr": {
+          "title": "Signature électronique sur les expéditions",
+          "description": "Le module d'expédition s'enrichit d'une fonctionnalité permettant de faire signer numériquement les bons de livraison."
+        },
+        "en": {
+          "title": "Digital Signature Support on Shipments",
+          "description": "The shipments flow gets updated with a dedicated signature capture tool to sign delivery sheets electronically."
+        },
+        "es": {
+          "title": "Soporte de Firma Digital en Envíos",
+          "description": "El flujo de expediciones se actualiza con una funcionalidad de captura de firma para validar las entregas de material de forma electrónica."
+        }
       }
-    ],
-    "rh_salaires": [
-      {
-        "text": "Configuración del Menú de Parte de Horas (Timesheet)",
-        "description": "Se ha añadido un parámetro global para establecer una ruta o menú de acceso por defecto a las hojas de tiempo de los usuarios.",
-        "image": null
+    },
+    {
+      "id": "v23-010",
+      "order": 10,
+      "release": "v23",
+      "tags": [
+        "ventes_logistique"
+      ],
+      "links": [],
+      "images": {
+        "default": null
       },
-      {
-        "text": "Filtros y Registro Histórico de Vacaciones",
-        "description": "Listados de saldos de vacaciones mejorados con ordenación por empleado y un acceso directo para consultar el historial de modificaciones.",
-        "image": "img/v23/es/holiday_history.png"
+      "translations": {
+        "fr": {
+          "title": "Mise à jour des Incoterms 2025",
+          "description": "Les codes Incoterms ont été mis à jour pour s'aligner sur les normes officielles de 2025 avec l'intégration de nouveaux termes."
+        },
+        "en": {
+          "title": "Incoterms 2025 Standards Update",
+          "description": "Incoterms have been updated to fully comply with standard 2025 definitions, alongside the introduction of new global terms."
+        },
+        "es": {
+          "title": "Actualización de Estándares Incoterms 2025",
+          "description": "Se han actualizado las definiciones de códigos Incoterms para cumplir con la normativa oficial de 2025, incorporando nuevos términos comerciales."
+        }
       }
-    ],
-    "ui_ergonomie": [
-      {
-        "text": "Pestañas de Agenda y Mensajería Integradas",
-        "description": "Las pestañas de 'Mensajería' y 'Agenda' se integran directamente en las fichas de pedidos, envíos y presupuestos para centralizar las comunicaciones.",
-        "image": "img/v23/es/object_agenda.png"
+    },
+    {
+      "id": "v23-011",
+      "order": 11,
+      "release": "v23",
+      "tags": [
+        "rh_salaires"
+      ],
+      "links": [],
+      "images": {
+        "default": null
       },
-      {
-        "text": "Logotipo de Empresa en la Vista Kanban",
-        "description": "La vista de tarjetas en columnas (Kanban) se rediseña para mostrar de manera visual el logotipo de las empresas asociadas.",
-        "image": "img/v23/es/kanban_logo.png"
-      },
-      {
-        "text": "Mejoras en el Portal Web de Clientes",
-        "description": "El portal externo amplía sus funciones añadiendo un explorador de directorios compartidos y descarga de documentos enlazados a fichas de terceros.",
-        "image": null
-      },
-      {
-        "text": "Widget de Embudo de Conversión de Oportunidades",
-        "description": "Un nuevo gráfico en forma de embudo está disponible para el panel de control, permitiendo un seguimiento visual del estado de las oportunidades CRM.",
-        "image": "img/v23/es/crm_funnel.png"
+      "translations": {
+        "fr": {
+          "title": "Configuration du menu de feuille de temps (Timesheet)",
+          "description": "Ajout d'une option de configuration pour définir un menu d'accès par défaut aux feuilles de temps des collaborateurs."
+        },
+        "en": {
+          "title": "Default Timesheet Menu Customization",
+          "description": "A new global parameter has been implemented to define a customized default navigation path for user timesheets."
+        },
+        "es": {
+          "title": "Configuración del Menú de Parte de Horas (Timesheet)",
+          "description": "Se ha añadido un parámetro global para establecer una ruta o menú de acceso por defecto a las hojas de tiempo de los usuarios."
+        }
       }
-    ],
-    "regressions_alertes": [
-      {
-        "text": "Lógica Invertida en la Fecha por Defecto",
-        "description": "Se ha invertido el comportamiento en la creación de documentos: ahora el sistema requiere una configuración específica si no desea rellenar automáticamente la fecha actual.",
-        "image": null
+    },
+    {
+      "id": "v23-012",
+      "order": 12,
+      "release": "v23",
+      "tags": [
+        "rh_salaires"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/holiday_history.png",
+        "en": "img/v23/en/holiday_history.png",
+        "es": "img/v23/es/holiday_history.png"
       },
-      {
-        "text": "Restricción de Código PHP en el Módulo Sitios Web",
-        "description": "Si utiliza scripts PHP personalizados en sus páginas del módulo CMS, es obligatorio añadir una variable de seguridad específica en su archivo de configuración para conservar permisos de edición.",
-        "image": null
+      "translations": {
+        "fr": {
+          "title": "Tri et historique des congés",
+          "description": "Il est désormais possible de trier le solde des congés par employé et d'accéder directement à un lien vers l'historique des modifications."
+        },
+        "en": {
+          "title": "Employee Leave Filtering & History Links",
+          "description": "Enhanced holiday balance lists featuring native employee filtering and a quick link to inspect balance modification logs."
+        },
+        "es": {
+          "title": "Filtros y Registro Histórico de Vacaciones",
+          "description": "Listados de saldos de vacaciones mejorados con ordenación por empleado y un acceso directo para consultar el historial de modificaciones."
+        }
       }
-    ]
-  }
+    },
+    {
+      "id": "v23-013",
+      "order": 13,
+      "release": "v23",
+      "tags": [
+        "ui_ergonomie"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/object_agenda.png",
+        "en": "img/v23/en/object_agenda.png",
+        "es": "img/v23/es/object_agenda.png"
+      },
+      "translations": {
+        "fr": {
+          "title": "Messagerie et Agenda intégrés aux objets",
+          "description": "Les onglets 'Messagerie' et 'Agenda' font leur apparition directement sur les fiches de commandes, d'expéditions et de propositions commerciales pour centraliser les échanges."
+        },
+        "en": {
+          "title": "Integrated Object Messaging and Agenda Tabs",
+          "description": "Dedicated 'Messaging' and 'Agenda' tabs are now integrated into orders, shipments, and proposals cards to centralize customer context."
+        },
+        "es": {
+          "title": "Pestañas de Agenda y Mensajería Integradas",
+          "description": "Las pestañas de 'Mensajería' y 'Agenda' se integran directamente en las fichas de pedidos, envíos y presupuestos para centralizar las comunicaciones."
+        }
+      }
+    },
+    {
+      "id": "v23-014",
+      "order": 14,
+      "release": "v23",
+      "tags": [
+        "ui_ergonomie"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/kanban_logo.png",
+        "en": "img/v23/en/kanban_logo.png",
+        "es": "img/v23/es/kanban_logo.png"
+      },
+      "translations": {
+        "fr": {
+          "title": "Vue Kanban avec affichage du logo d'entreprise",
+          "description": "La vue en colonnes (Kanban) devient plus visuelle en affichant directement le logo des entreprises sur les cartes."
+        },
+        "en": {
+          "title": "Company Logo Display inside Kanban Views",
+          "description": "The kanban board view layout has been redesigned to visibly show company logos on active element cards."
+        },
+        "es": {
+          "title": "Logotipo de Empresa en la Vista Kanban",
+          "description": "La vista de tarjetas en columnas (Kanban) se rediseña para mostrar de manera visual el logotipo de las empresas asociadas."
+        }
+      }
+    },
+    {
+      "id": "v23-015",
+      "order": 15,
+      "release": "v23",
+      "tags": [
+        "ui_ergonomie"
+      ],
+      "links": [],
+      "images": {
+        "default": null
+      },
+      "translations": {
+        "fr": {
+          "title": "Amélioration du Web Portal client",
+          "description": "Le portail web s'enrichit d'un explorateur de fichiers pour les documents partagés et permet le partage direct des documents liés aux tiers."
+        },
+        "en": {
+          "title": "Enhanced Client Web Portal Features",
+          "description": "The client portal expands its feature set with an integrated shared directory navigator and direct access to linked thirdparty documents."
+        },
+        "es": {
+          "title": "Mejoras en el Portal Web de Clientes",
+          "description": "El portal externo amplía sus funciones añadiendo un explorador de directorios compartidos y descarga de documentos enlazados a fichas de terceros."
+        }
+      }
+    },
+    {
+      "id": "v23-016",
+      "order": 16,
+      "release": "v23",
+      "tags": [
+        "ui_ergonomie"
+      ],
+      "links": [],
+      "images": {
+        "fr": "img/v23/fr/crm_funnel.png",
+        "en": "img/v23/en/crm_funnel.png",
+        "es": "img/v23/es/crm_funnel.png"
+      },
+      "translations": {
+        "fr": {
+          "title": "Widget 'Entonnoir d'opportunités'",
+          "description": "Un nouveau widget graphique sous forme de tunnel de conversion est disponible sur le tableau de bord pour suivre vos opportunités commerciales."
+        },
+        "en": {
+          "title": "Opportunities Conversion Funnel Widget",
+          "description": "A clean conversion funnel graphic widget is now available for your home dashboard to efficiently track CRM opportunities."
+        },
+        "es": {
+          "title": "Widget de Embudo de Conversión de Oportunidades",
+          "description": "Un nuevo gráfico en forma de embudo está disponible para el panel de control, permitiendo un seguimiento visual del estado de las oportunidades CRM."
+        }
+      }
+    },
+    {
+      "id": "v23-017",
+      "order": 17,
+      "release": "v23",
+      "tags": [
+        "regressions_alertes"
+      ],
+      "links": [],
+      "images": {
+        "default": null
+      },
+      "translations": {
+        "fr": {
+          "title": "Changement de comportement sur la date par défaut",
+          "description": "La logique de création des propositions, commandes et factures a été inversée : le système requiert désormais une option pour NE PAS pré-remplir automatiquement la date du jour."
+        },
+        "en": {
+          "title": "Inverted Creation Date Validation Logic",
+          "description": "Proposal, order, and invoice processing has inverted its date pre-filling logic: an option is now required to NOT automatically fill today's date."
+        },
+        "es": {
+          "title": "Lógica Invertida en la Fecha por Defecto",
+          "description": "Se ha invertido el comportamiento en la creación de documentos: ahora el sistema requiere una configuración específica si no desea rellenar automáticamente la fecha actual."
+        }
+      }
+    },
+    {
+      "id": "v23-018",
+      "order": 18,
+      "release": "v23",
+      "tags": [
+        "regressions_alertes"
+      ],
+      "links": [],
+      "images": {
+        "default": null
+      },
+      "translations": {
+        "fr": {
+          "title": "Paramètre requis pour l'édition PHP dans le module Sites Web",
+          "description": "Si vous utilisez des pages PHP dans le module de site web, vous devez impérativement ajouter une variable de sécurité spécifique dans votre fichier de configuration pour conserver les droits d'édition."
+        },
+        "en": {
+          "title": "Custom PHP Restriction within Website Module",
+          "description": "If you host custom PHP scripts via the CMS/Website module, you must manually add a new security toggle inside your configuration file to keep editing rights."
+        },
+        "es": {
+          "title": "Restricción de Código PHP en el Módulo Sitios Web",
+          "description": "Si utiliza scripts PHP personalizados en sus páginas del módulo CMS, es obligatorio añadir una variable de seguridad específica en su archivo de configuración para conservar permisos de edición."
+        }
+      }
+    }
+  ]
 }

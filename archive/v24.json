@@ -1,0 +1,284 @@
+{
+  "fr": {
+    "ia_innovation": [
+      {
+        "text": "Introduction de l'assistant IA et serveur MCP",
+        "description": "Dolibarr intègre désormais de manière expérimentale un assistant intelligent basé sur l'architecture MCP pour vous accompagner au quotidien, incluant un compteur de jetons dédié à l'IA.",
+        "image": "img/v24/fr/ai_assistant.png"
+      },
+      {
+        "text": "Correcteur orthographique IA pour les Tickets",
+        "description": "Activez les outils d'IA directement au sein de l'éditeur de messages du module de gestion des tickets pour corriger ou améliorer le style de vos réponses clients.",
+        "image": "img/v24/fr/ticket_ai.png"
+      }
+    ],
+    "compta_facturation": [
+      {
+        "text": "Choix du mode de gestion comptable",
+        "description": "Une refonte majeure vous permet de choisir explicitement et de basculer facilement entre une comptabilité de caisse et une comptabilité d'engagement.",
+        "image": "img/v24/fr/accounting_mode.png"
+      },
+      {
+        "text": "Envoi automatique des factures récurrentes",
+        "description": "Gagnez du temps au quotidien : Dolibarr peut désormais envoyer automatiquement par email la facture générée à partir d'un modèle prédéfini.",
+        "image": null
+      },
+      {
+        "text": "Visibilité bancaire accrue sur les listes de factures",
+        "description": "Une nouvelle colonne 'Compte Bancaire' fait son apparition dans les vues de listes des factures clients et fournisseurs pour simplifier le suivi des règlements.",
+        "image": "img/v24/fr/invoice_list_bank.png"
+      },
+      {
+        "text": "Évolution du module WebPortal pour la comptabilité",
+        "description": "Le portail web externe s'enrichit d'un système de captcha pour sécuriser les accès et prend désormais en charge les interventions et les tickets de support.",
+        "image": null
+      }
+    ],
+    "ventes_logistique": [
+      {
+        "text": "Stabilisation complète du module de Transfert de Stock",
+        "description": "Le tout nouveau module bénéficie désormais d'une couverture fonctionnelle intégrale et d'une stabilisation logicielle accrue pour vos mouvements d'entrepôts.",
+        "image": "img/v24/fr/stock_transfer.png"
+      },
+      {
+        "text": "Nouvelle sécurité anti-sur-expédition (Option cachée)",
+        "description": "La nouvelle option masquée permet d'empêcher formellement l'expédition d'une quantité de produits supérieure à celle initialement commandée.",
+        "image": null
+      },
+      {
+        "text": "Gestion fluide des lignes d'expédition au brouillon",
+        "description": "L'ergonomie des fiches d'expédition a été repensée avec l'ajout d'une fonctionnalité de glisser-déposer (drag-and-drop) pour réorganiser vos lignes en brouillon.",
+        "image": "img/v24/fr/shipping_drag_drop.png"
+      }
+    ],
+    "rh_salaires": [
+      {
+        "text": "Génération PDF et navigation dans le module Salaires",
+        "description": "Le module des salaires permet à présent de générer les documents au format PDF et intègre des raccourcis temporels d'un clic pour naviguer sur le mois précédent, en cours ou suivant.",
+        "image": "img/v24/fr/salaries_pdf.png"
+      },
+      {
+        "text": "Importation facilitée des soldes de congés",
+        "description": "L'assistant d'importation de fichiers CSV/XLSX a été amélioré pour supporter la mise à jour directe des soldes de congés de vos collaborateurs.",
+        "image": null
+      }
+    ],
+    "ui_ergonomie": [
+      {
+        "text": "Pense-bêtes virtuels avec le module 'Quick memo'",
+        "description": "Un nouveau module expérimental fait son apparition pour vous permettre d'épingler des post-it virtuels sur n'importe quel écran de l'application.",
+        "image": "img/v24/fr/quick_memo.png"
+      },
+      {
+        "text": "Saisie intelligente des téléphones par pays",
+        "description": "Le champ de saisie des numéros de téléphone s'adapte automatiquement avec un menu déroulant affichant le drapeau et le code pays approprié.",
+        "image": "img/v24/fr/phone_input.png"
+      },
+      {
+        "text": "Formulaires unifiés pour les interventions",
+        "description": "L'interface utilisateur fusionne l'ancienne création de fiches d'interventions en deux étapes en un seul et unique formulaire rapide.",
+        "image": "img/v24/fr/intervention_form.png"
+      }
+    ],
+    "regressions_alertes": [
+      {
+        "text": "Suppression définitive du modèle de facture historique 'Crabe'",
+        "description": "Le très ancien modèle de document de facturation 'Crabe' a été retiré de l'application au profit du modèle moderne 'Sponge'. Vos modèles personnalisés restent fonctionnels.",
+        "image": null
+      },
+      {
+        "text": "Retrait complet du module de paiement Paybox",
+        "description": "Paybox n'est plus inclus dans le cœur de l'application Dolibarr. Il est vivement conseillé de migrer vers des solutions modernes alternatives telles que Stripe ou PayPal.",
+        "image": null
+      }
+    ]
+  },
+  "en": {
+    "ia_innovation": [
+      {
+        "text": "AI Assistant and MCP Server Introduction",
+        "description": "Dolibarr now features an experimental smart AI assistant based on the MCP architecture to support your daily operations, including a dedicated token/word counter.",
+        "image": "img/v24/en/ai_assistant.png"
+      },
+      {
+        "text": "AI Spell-Checker for Support Tickets",
+        "description": "Enable AI tools directly inside the message editor of the Tickets module to seamlessly correct spelling or enhance your client replies.",
+        "image": "img/v24/en/ticket_ai.png"
+      }
+    ],
+    "compta_facturation": [
+      {
+        "text": "Accounting Method Configuration",
+        "description": "A major technical overhaul lets you explicitly select and toggle between cash accounting and accrual accounting.",
+        "image": "img/v24/en/accounting_mode.png"
+      },
+      {
+        "text": "Automated Recurrent Invoice E-mailing",
+        "description": "Save time everyday: Dolibarr can now automatically e-mail invoices generated directly from a predefined recurring template.",
+        "image": null
+      },
+      {
+        "text": "Enhanced Invoicing Views with Bank Data",
+        "description": "A new 'Bank Account' column is now available in both customer and supplier invoice lists for improved financial tracking.",
+        "image": "img/v24/en/invoice_list_bank.png"
+      },
+      {
+        "text": "WebPortal Evolutions for Accounting & Tickets",
+        "description": "The external web portal receives a secure captcha layout and native support for tracking customer interventions and support tickets.",
+        "image": null
+      }
+    ],
+    "ventes_logistique": [
+      {
+        "text": "Full Functional Coverage for Stock Transfer Module",
+        "description": "The brand new module has achieved complete functional coverage and software stabilization for your internal warehouse product transfers.",
+        "image": "img/v24/en/stock_transfer.png"
+      },
+      {
+        "text": "Anti-Over-Shipping Restriction (Hidden Option)",
+        "description": "A new hidden configuration prevents warehouse operators from shipping quantities larger than what was originally ordered by the customer.",
+        "image": null
+      },
+      {
+        "text": "Drag-and-Drop for Draft Shipments",
+        "description": "Shipment processing user experience gets an update with an intuitive drag-and-drop feature to easily reorganize your draft lines.",
+        "image": "img/v24/en/shipping_drag_drop.png"
+      }
+    ],
+    "rh_salaires": [
+      {
+        "text": "PDF Generation and Shortcuts for Salaries",
+        "description": "The Salaries module now supports direct PDF document generation and integrates swift quick-click buttons to navigate to previous, current, or next month.",
+        "image": "img/v24/en/salaries_pdf.png"
+      },
+      {
+        "text": "Simplified Employee Leave Balance Import",
+        "description": "The standard CSV/XLSX import wizard has been optimized to handle direct updates of your employees' remaining leave balances.",
+        "image": null
+      }
+    ],
+    "ui_ergonomie": [
+      {
+        "text": "Virtual Post-Its with 'Quick memo' Module",
+        "description": "A new experimental module is now available, allowing users to easily pin virtual post-it notes across any application screen.",
+        "image": "img/v24/en/quick_memo.png"
+      },
+      {
+        "text": "Smart Phone Input fields with Country Flags",
+        "description": "Phone number fields have been optimized to feature an intuitive dropdown selecting country flags and pre-filling international dial codes.",
+        "image": "img/v24/en/phone_input.png"
+      },
+      {
+        "text": "Unified Intervention Creation Forms",
+        "description": "The user interface now merges the old legacy two-step intervention workflow into a single, unified, fast creation form.",
+        "image": "img/v24/en/intervention_form.png"
+      }
+    ],
+    "regressions_alertes": [
+      {
+        "text": "Permanent Removal of Legacy 'Crabe' Invoice Template",
+        "description": "The historical 'Crabe' PDF invoice layout has been completely removed from the core in favor of 'Sponge'. Your custom PDF templates remain unaffected.",
+        "image": null
+      },
+      {
+        "text": "Complete Removal of the Paybox Payment Module",
+        "description": "Paybox is no longer included in Dolibarr core. We strongly advise migrating towards modern payment gateways like Stripe or PayPal.",
+        "image": null
+      }
+    ]
+  },
+  "es": {
+    "ia_innovation": [
+      {
+        "text": "Introducción del Asistente de IA y Servidor MCP",
+        "description": "Dolibarr incorpora de forma experimental un asistente inteligente basado en la arquitectura MCP para ayudarle a diario, incluyendo un contador de tokens dedicado.",
+        "image": "img/v24/es/ai_assistant.png"
+      },
+      {
+        "text": "Corrector Ortográfico por IA para Tickets",
+        "description": "Active herramientas de inteligencia artificial directamente en el editor de mensajes de Tickets para corregir o mejorar el estilo de sus respuestas a los clientes.",
+        "image": "img/v24/es/ticket_ai.png"
+      }
+    ],
+    "compta_facturation": [
+      {
+        "text": "Elección del Modo de Gestión Contable",
+        "description": "Una renovación importante le permite seleccionar de forma explícita y cambiar fácilmente entre contabilidad de caja o contabilidad de devengo.",
+        "image": "img/v24/es/accounting_mode.png"
+      },
+      {
+        "text": "Envío Automático de Facturas Recurrentes",
+        "description": "Ahorre tiempo: Dolibarr ahora puede enviar automáticamente por correo electrónico la factura generada a partir de una plantilla predefinida.",
+        "image": null
+      },
+      {
+        "text": "Columna Cuenta Bancaria en Listas de Facturas",
+        "description": "Aparece una nueva columna llamada 'Cuenta Bancaria' en los listados de facturas de clientes y proveedores para simplificar el control de los cobros.",
+        "image": "img/v24/es/invoice_list_bank.png"
+      },
+      {
+        "text": "Evolución del Módulo WebPortal",
+        "description": "El portal web externo añade un sistema de captcha para asegurar los accesos y ahora soporta el seguimiento de intervenciones y tickets de soporte.",
+        "image": null
+      }
+    ],
+    "ventes_logistique": [
+      {
+        "text": "Estabilización del Módulo de Transferencias de Stock",
+        "description": "El nuevo módulo de transferencia entre almacenes ya cuenta con una cobertura functional completa y una estabilidad de software mejorada.",
+        "image": "img/v24/es/stock_transfer.png"
+      },
+      {
+        "text": "Seguridad Contra el Exceso de Envío (Opción Oculta)",
+        "description": "Una nueva opción oculta del sistema permite bloquear e impedir la expedición de productos en cantidades superiores a las solicitadas en el pedido original.",
+        "image": null
+      },
+      {
+        "text": "Gestión de Líneas de Envío en Borrador",
+        "description": "La ergonomía de los envíos mejora añadiendo la función de arrastrar y soltar (drag-and-drop) para reorganizar de forma sencilla sus líneas en borrador.",
+        "image": "img/v24/es/shipping_drag_drop.png"
+      }
+    ],
+    "rh_salaires": [
+      {
+        "text": "Generación de PDF y Navegación en el Módulo Salarios",
+        "description": "El módulo de salarios ahora permite generar documentos en formato PDF e integra botones rápidos para navegar al mes anterior, actual o siguiente con un solo clic.",
+        "image": "img/v24/es/salaries_pdf.png"
+      },
+      {
+        "text": "Importación Sencilla de Saldos de Vacaciones",
+        "description": "Se ha optimizado el asistente de importación de archivos CSV/XLSX para permitir la actualización directa de los saldos de vacaciones de sus empleados.",
+        "image": null
+      }
+    ],
+    "ui_ergonomie": [
+      {
+        "text": "Notas Virtuales en Pantalla con 'Quick memo'",
+        "description": "Aparece un nuevo módulo experimental que le permite colocar notas virtuales (tipo post-it) en cualquier pantalla de la aplicación.",
+        "image": "img/v24/es/quick_memo.png"
+      },
+      {
+        "text": "Entrada de Teléfono Inteligente por País",
+        "description": "El campo para introducir números de teléfono ahora cuenta con un menú desplegable que muestra las banderas y el código internacional correspondiente.",
+        "image": "img/v24/es/phone_input.png"
+      },
+      {
+        "text": "Formulario Unificado para Intervenciones",
+        "description": "La interfaz de usuario unifica la antigua creación de intervenciones de dos pasos en un único y rápido formulario centralizado.",
+        "image": "img/v24/es/intervention_form.png"
+      }
+    ],
+    "regressions_alertes": [
+      {
+        "text": "Eliminación Definitiva de la Plantilla de Factura 'Crabe'",
+        "description": "El antiguo modelo de documento PDF 'Crabe' ha sido retirado de la aplicación en favor del diseño moderno 'Sponge'. Sus modelos personalizados siguen funcionando.",
+        "image": null
+      },
+      {
+        "text": "Retirada Completa del Módulo de Pago Paybox",
+        "description": "Paybox ya no está incluido en el núcleo de Dolibarr. Se aconseja migrar hacia pasarelas de pago más actuales como Stripe o PayPal.",
+        "image": null
+      }
+    ]
+  }
+}
