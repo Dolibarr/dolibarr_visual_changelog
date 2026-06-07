@@ -1,21 +1,6 @@
 {
   "versions_available": ["v24", "v23"],
   "translations": {
-    "fr": {
-      "categories": {
-        "ia_innovation": "🤖 Intelligence Artificielle & Innovation",
-        "compta_facturation": "🧮 Comptabilité & Facturation",
-        "ventes_logistique": "📦 Ventes, Stocks & Expéditions",
-        "rh_salaires": "👥 Ressources Humaines & Salaires",
-        "ui_ergonomie": "🎨 Interface & Ergonomie (UI/UX)",
-        "regressions_alertes": "⚠️ Changements Importants & Alertes"
-      },
-      "labels": {
-        "title": "Nouveautés de Dolibarr",
-        "version_select": "Choisir une version :",
-        "lang_select": "Langue :"
-      }
-    },
     "en": {
       "categories": {
         "ia_innovation": "🤖 Artificial Intelligence & Innovation",
@@ -31,6 +16,21 @@
         "lang_select": "Language:"
       }
     },
+    "fr": {
+      "categories": {
+        "ia_innovation": "🤖 Intelligence Artificielle & Innovation",
+        "compta_facturation": "🧮 Comptabilité & Facturation",
+        "ventes_logistique": "📦 Ventes, Stocks & Expéditions",
+        "rh_salaires": "👥 Ressources Humaines & Salaires",
+        "ui_ergonomie": "🎨 Interface & Ergonomie (UI/UX)",
+        "regressions_alertes": "⚠️ Changements Importants & Alertes"
+      },
+      "labels": {
+        "title": "Nouveautés de Dolibarr",
+        "version_select": "Choisir une version :",
+        "lang_select": "Langue :"
+      }
+    },
     "es": {
       "categories": {
         "ia_innovation": "🤖 Inteligencia Artificial e Innovación",
@@ -44,6 +44,21 @@
         "title": "Novedades de Dolibarr",
         "version_select": "Seleccionar versión:",
         "lang_select": "Idioma:"
+      }
+    },
+    "el": {
+      "categories": {
+        "ia_innovation": "🤖 Τεχνητή Νοημοσύνη & Καινοτομία",
+        "compta_facturation": "🧮 Λογιστική & Τιμολόγηση",
+        "ventes_logistique": "📦 Πωλήσεις, Αποθέματα & Αποστολές",
+        "rh_salaires": "👥 Ανθρώπινοι Πόροι & Μισθοί",
+        "ui_ergonomie": "🎨 Διεπαφή & Εργονομία (UI/UX)",
+        "regressions_alertes": "⚠️ Σημαντικές Αλλαγές & Προειδοποιήσεις"
+      },
+      "labels": {
+        "title": "Τι νέο υπάρχει στο Dolibarr",
+        "version_select": "Επιλέξτε έκδοση:",
+        "lang_select": "Γλώσσα:"
       }
     }
   }

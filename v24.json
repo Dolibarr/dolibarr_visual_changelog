@@ -30,6 +30,10 @@
         "es": {
           "title": "Introducción del Asistente de IA y Servidor MCP",
           "description": "Dolibarr incorpora de forma experimental un asistente inteligente basado en la arquitectura MCP para ayudarle a diario, incluyendo un contador de tokens dedicado."
+        },
+        "el": {
+          "title": "Υλοποίηση AI Assistant και MCP Server",
+          "description": "Το Dolibarr διαθέτει πλέον έναν πειραματικό έξυπνο βοηθό AI που βασίζεται στην αρχιτεκτονική MCP για την υποστήριξη των καθημερινών σας λειτουργιών, συμπεριλαμβανομένου ενός ειδικού μετρητή token/λέξεων."
         }
       }
     },
@@ -58,6 +62,10 @@
         "es": {
           "title": "Corrector Ortográfico por IA para Tickets",
           "description": "Active herramientas de inteligencia artificial directamente en el editor de mensajes de Tickets para corregir o mejorar el estilo de sus respuestas a los clientes."
+        },
+        "el": {
+          "title": "Έλεγχος Ορθογραφίας AI για Ticket Υποστήριξης",
+          "description": "Ενεργοποιήστε τα AI εργαλεία απευθείας μέσα στον επεξεργαστή μηνυμάτων του module των Tickets για ορθογραφικό έλεγχο ή να βελτιώνετε τις απαντήσεις προς τους πελάτες σας."
         }
       }
     },
@@ -86,6 +94,10 @@
         "es": {
           "title": "Elección del Modo de Gestión Contable",
           "description": "Una renovación importante le permite seleccionar de forma explícita y cambiar fácilmente entre contabilidad de caja o contabilidad de devengo."
+        },
+        "el": {
+          "title": "Διαμόρφωση Λογιστικής Μεθόδου",
+          "description": "Μια σημαντική τεχνική αναθεώρηση σάς επιτρέπει να επιλέγετε ρητά και να κάνετε εναλλαγή μεταξύ ταμειακής λογιστικής (cash accounting) και λογιστικής δεδουλευμένων (accrual accounting)."
         }
       }
     },
@@ -112,6 +124,10 @@
         "es": {
           "title": "Envío Automático de Facturas Recurrentes",
           "description": "Ahorre tiempo: Dolibarr ahora puede enviar automáticamente por correo electrónico la factura generada a partir de una plantilla predefinida."
+        },
+        "el": {
+          "title": "Αυτοματοποιημένη Αποστολή Επαναλαμβανόμενων Τιμολογίων μέσω E-mail",
+          "description": "Εξοικονομήστε χρόνο καθημερινά: Το Dolibarr μπορεί πλέον να στέλνει αυτόματα μέσω e-mail τιμολόγια που δημιουργούνται απευθείας από ένα προκαθορισμένο επαναλαμβανόμενο πρότυπο."
         }
       }
     },
@@ -140,6 +156,10 @@
         "es": {
           "title": "Columna Cuenta Bancaria en Listas de Facturas",
           "description": "Aparece una nueva columna llamada 'Cuenta Bancaria' en los listados de facturas de clientes y proveedores para simplificar el control de los cobros."
+        },
+        "el": {
+          "title": "Βελτιωμένες Προβολές Τιμολόγησης με προσθήκη Τράπεζας",
+          "description": "Μια νέα στήλη 'Τραπεζικός Λογαριασμός' είναι πλέον διαθέσιμη στις λίστες τιμολογίων πελατών και προμηθευτών για καλύτερη χρηματοοικονομική παρακολούθηση."
         }
       }
     },
@@ -166,6 +186,10 @@
         "es": {
           "title": "Evolución del Módulo WebPortal",
           "description": "El portal web externo añade un sistema de captcha para asegurar los accesos y ahora soporta el seguimiento de intervenciones y tickets de soporte."
+        },
+        "el": {
+          "title": "Εξελίξεις στο WebPortal για Λογιστική & Tickets",
+          "description": "Η εξωτερική διαδικτυακή πύλη αποκτά μια ασφαλή διάταξη captcha και εγγενή υποστήριξη για την παρακολούθηση των παρεμβάσεων πελατών και των tickets υποστήριξης."
         }
       }
     },
@@ -194,6 +218,10 @@
         "es": {
           "title": "Estabilización del Módulo de Transferencias de Stock",
           "description": "El nuevo módulo de transferencia entre almacenes ya cuenta con una cobertura functional completa y una estabilidad de software mejorada."
+        },
+        "el": {
+          "title": "Πλήρης Λειτουργική Κάλυψη για το Module Μεταφοράς Αποθεμάτων",
+          "description": "Το ολοκαίνουργιο module έχει επιτύχει πλήρη λειτουργική κάλυψη και σταθεροποίηση λογισμικού για τις εσωτερικές μεταφορές προϊόντων μεταξύ αποθηκών."
         }
       }
     },
@@ -220,6 +248,10 @@
         "es": {
           "title": "Seguridad Contra el Exceso de Envío (Opción Oculta)",
           "description": "Una nueva opción oculta del sistema permite bloquear e impedir la expedición de productos en cantidades superiores a las solicitadas en el pedido original."
+        },
+        "el": {
+          "title": "Περιορισμός αποστολής στις ζητηθέντες ποσότητες(Κρυφή Επιλογή)",
+          "description": "Μια νέα κρυφή ρύθμιση εμποδίζει τους χειριστές της αποθήκης να αποστείλουν ποσότητες μεγαλύτερες από αυτές που είχαν αρχικά παραγγελθεί από τον πελάτη."
         }
       }
     },
@@ -248,6 +280,10 @@
         "es": {
           "title": "Gestión de Líneas de Envío en Borrador",
           "description": "La ergonomía de los envíos mejora añadiendo la función de arrastrar y soltar (drag-and-drop) para reorganizar de forma sencilla sus líneas en borrador."
+        },
+        "el": {
+          "title": "Drag-and-Drop για Πρόχειρες Αποστολές",
+          "description": "Η εμπειρία χρήστη στη διαχείριση αποστολών ανανεώνεται με μια διαισθητική λειτουργία drag-and-drop για εύκολη αναδιοργάνωση των γραμμών σε κατάσταση προσχεδίου."
         }
       }
     },
@@ -276,6 +312,10 @@
         "es": {
           "title": "Generación de PDF y Navegación en el Módulo Salarios",
           "description": "El módulo de salarios ahora permite generar documentos en formato PDF e integra botones rápidos para navegar al mes anterior, actual o siguiente con un solo clic."
+        },
+        "el": {
+          "title": "Δημιουργία PDF και Συντομεύσεις για Μισθοδοσίες",
+          "description": "Το module Μισθοδοσίας υποστηρίζει πλέον απευθείας δημιουργία εγγράφων PDF και ενσωματώνει κουμπιά γρήγορου κλικ για πλοήγηση στον προηγούμενο, τον τρέχοντα ή τον επόμενο μήνα."
         }
       }
     },
@@ -302,6 +342,10 @@
         "es": {
           "title": "Importación Sencilla de Saldos de Vacaciones",
           "description": "Se ha optimizado el asistente de importación de archivos CSV/XLSX para permitir la actualización directa de los saldos de vacaciones de sus empleados."
+        },
+        "el": {
+          "title": "Απλοποιημένη Εισαγωγή Υπολοίπου Αδειών Υπαλλήλων",
+          "description": "Ο τυπικός οδηγός εισαγωγής CSV/XLSX έχει βελτιστοποιηθεί για να χειρίζεται απευθείας ενημερώσεις των υπολοίπων αδειών που απομένουν στους υπαλλήλους σας."
         }
       }
     },
@@ -330,6 +374,10 @@
         "es": {
           "title": "Notas Virtuales en Pantalla con 'Quick memo'",
           "description": "Aparece un nuevo módulo experimental que le permite colocar notas virtuales (tipo post-it) en cualquier pantalla de la aplicación."
+        },
+        "el": {
+          "title": "Ψηφιακά Post-Its με το Module 'Quick memo'",
+          "description": "Ένα νέο πειραματικό module είναι πλέον διαθέσιμο, επιτρέποντας στους χρήστες να καρφιτσώνουν εύκολα εικονικές σημειώσεις post-it σε οποιαδήποτε οθόνη της εφαρμογής."
         }
       }
     },
@@ -358,6 +406,10 @@
         "es": {
           "title": "Entrada de Teléfono Inteligente por País",
           "description": "El campo para introducir números de teléfono ahora cuenta con un menú desplegable que muestra las banderas y el código internacional correspondiente."
+        },
+        "el": {
+          "title": "Έξυπνα Πεδία Εισαγωγής Τηλεφώνου με Σημαίες Χωρών",
+          "description": "Τα πεδία αριθμών τηλεφώνου έχουν βελτιστοποιηθεί ώστε να διαθέτουν ένα διαισθητικό πτυσσόμενο μενού επιλογής σημαιών χωρών και αυτόματης συμπλήρωσης των διεθνών κωδικών κλήσης."
         }
       }
     },
@@ -386,6 +438,10 @@
         "es": {
           "title": "Formulario Unificado para Intervenciones",
           "description": "La interfaz de usuario unifica la antigua creación de intervenciones de dos pasos en un único y rápido formulario centralizado."
+        },
+        "el": {
+          "title": "Ενοποιημένες Φόρμες Δημιουργίας Παρεμβάσεων",
+          "description": "Η διεπαφή χρήστη συγχωνεύει πλέον την παλιά ροή εργασίας παρεμβάσεων δύο βημάτων σε μια ενιαία, ενοποιημένη και γρήγορη φόρμα δημιουργίας."
         }
       }
     },
@@ -412,6 +468,10 @@
         "es": {
           "title": "Eliminación Definitiva de la Plantilla de Factura 'Crabe'",
           "description": "El antiguo modelo de documento PDF 'Crabe' ha sido retirado de la aplicación en favor del diseño moderno 'Sponge'. Sus modelos personalizados siguen funcionando."
+        },
+        "el": {
+          "title": "Μόνιμη Κατάργηση του Παλιού Προτύπου Τιμολογίου 'Crabe'",
+          "description": "Το παρωχημένο πρότυπο τιμολογίου PDF 'Crabe' αφαιρέθηκε εντελώς από τον πυρήνα. Χρησιμοποιήστε το 'Sponge''. Τα προσαρμοσμένα πρότυπα PDF σας δεν επηρεάζονται."
         }
       }
     },
@@ -438,102 +498,12 @@
         "es": {
           "title": "Retirada Completa del Módulo de Pago Paybox",
           "description": "Paybox ya no está incluido en el núcleo de Dolibarr. Se aconseja migrar hacia pasarelas de pago más actuales como Stripe o PayPal."
+        },
+        "el": {
+          "title": "Πλήρης Κατάργηση του Module Πληρωμών Paybox",
+          "description": "Το Paybox δεν περιλαμβάνεται πλέον στον πυρήνα του Dolibarr. Συνιστούμε ανεπιφύλακτα τη μετάβαση σε σύγχρονες πύλες πληρωμών όπως το Stripe ή το PayPal."
         }
       }
-    ]
-  },
-  "el": {
-    "ia_innovation": [
-      {
-        "text": "Υλοποίηση AI Assistant και MCP Server",
-        "description": "Το Dolibarr διαθέτει πλέον έναν πειραματικό έξυπνο βοηθό AI που βασίζεται στην αρχιτεκτονική MCP για την υποστήριξη των καθημερινών σας λειτουργιών, συμπεριλαμβανομένου ενός ειδικού μετρητή token/λέξεων.",
-        "image": "img/v24/el/ai_assistant.png"
-      },
-      {
-        "text": "Έλεγχος Ορθογραφίας AI για Ticket Υποστήριξης",
-        "description": "Ενεργοποιήστε τα AI εργαλεία απευθείας μέσα στον επεξεργαστή μηνυμάτων του module των Tickets για ορθογραφικό έλεγχο ή να βελτιώνετε τις απαντήσεις προς τους πελάτες σας.",
-        "image": "img/v24/el/ticket_ai.png"
-      }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Διαμόρφωση Λογιστικής Μεθόδου",
-        "description": "Μια σημαντική τεχνική αναθεώρηση σάς επιτρέπει να επιλέγετε ρητά και να κάνετε εναλλαγή μεταξύ ταμειακής λογιστικής (cash accounting) και λογιστικής δεδουλευμένων (accrual accounting).",
-        "image": "img/v24/el/accounting_mode.png"
-      },
-      {
-        "text": "Αυτοματοποιημένη Αποστολή Επαναλαμβανόμενων Τιμολογίων μέσω E-mail",
-        "description": "Εξοικονομήστε χρόνο καθημερινά: Το Dolibarr μπορεί πλέον να στέλνει αυτόματα μέσω e-mail τιμολόγια που δημιουργούνται απευθείας από ένα προκαθορισμένο επαναλαμβανόμενο πρότυπο.",
-        "image": null
-      },
-      {
-        "text": "Βελτιωμένες Προβολές Τιμολόγησης με προσθήκη Τράπεζας",
-        "description": "Μια νέα στήλη 'Τραπεζικός Λογαριασμός' είναι πλέον διαθέσιμη στις λίστες τιμολογίων πελατών και προμηθευτών για καλύτερη χρηματοοικονομική παρακολούθηση.",
-        "image": "img/v24/el/invoice_list_bank.png"
-      },
-      {
-        "text": "Εξελίξεις στο WebPortal για Λογιστική & Tickets",
-        "description": "Η εξωτερική διαδικτυακή πύλη αποκτά μια ασφαλή διάταξη captcha και εγγενή υποστήριξη για την παρακολούθηση των παρεμβάσεων πελατών και των tickets υποστήριξης.",
-        "image": null
-      }
-    ],
-    "ventes_logistique": [
-      {
-        "text": "Πλήρης Λειτουργική Κάλυψη για το Module Μεταφοράς Αποθεμάτων",
-        "description": "Το ολοκαίνουργιο module έχει επιτύχει πλήρη λειτουργική κάλυψη και σταθεροποίηση λογισμικού για τις εσωτερικές μεταφορές προϊόντων μεταξύ αποθηκών.",
-        "image": "img/v24/el/stock_transfer.png"
-      },
-      {
-        "text": "Περιορισμός αποστολής στις ζητηθέντες ποσότητες(Κρυφή Επιλογή)",
-        "description": "Μια νέα κρυφή ρύθμιση εμποδίζει τους χειριστές της αποθήκης να αποστείλουν ποσότητες μεγαλύτερες από αυτές που είχαν αρχικά παραγγελθεί από τον πελάτη.",
-        "image": null
-      },
-      {
-        "text": "Drag-and-Drop για Πρόχειρες Αποστολές",
-        "description": "Η εμπειρία χρήστη στη διαχείριση αποστολών ανανεώνεται με μια διαισθητική λειτουργία drag-and-drop για εύκολη αναδιοργάνωση των γραμμών σε κατάσταση προσχεδίου.",
-        "image": "img/v24/en/shipping_drag_drop.png"
-      }
-    ],
-    "rh_salaires": [
-      {
-        "text": "Δημιουργία PDF και Συντομεύσεις για Μισθοδοσίες",
-        "description": "Το module Μισθοδοσίας υποστηρίζει πλέον απευθείας δημιουργία εγγράφων PDF και ενσωματώνει κουμπιά γρήγορου κλικ για πλοήγηση στον προηγούμενο, τον τρέχοντα ή τον επόμενο μήνα.",
-        "image": "img/v24/el/salaries_pdf.png"
-      },
-      {
-        "text": "Απλοποιημένη Εισαγωγή Υπολοίπου Αδειών Υπαλλήλων",
-        "description": "Ο τυπικός οδηγός εισαγωγής CSV/XLSX έχει βελτιστοποιηθεί για να χειρίζεται απευθείας ενημερώσεις των υπολοίπων αδειών που απομένουν στους υπαλλήλους σας.",
-        "image": null
-      }
-    ],
-    "ui_ergonomie": [
-      {
-        "text": "Ψηφιακά Post-Its με το Module 'Quick memo'",
-        "description": "Ένα νέο πειραματικό module είναι πλέον διαθέσιμο, επιτρέποντας στους χρήστες να καρφιτσώνουν εύκολα εικονικές σημειώσεις post-it σε οποιαδήποτε οθόνη της εφαρμογής.",
-        "image": "img/v24/el/quick_memo.png"
-      },
-      {
-        "text": "Έξυπνα Πεδία Εισαγωγής Τηλεφώνου με Σημαίες Χωρών",
-        "description": "Τα πεδία αριθμών τηλεφώνου έχουν βελτιστοποιηθεί ώστε να διαθέτουν ένα διαισθητικό πτυσσόμενο μενού επιλογής σημαιών χωρών και αυτόματης συμπλήρωσης των διεθνών κωδικών κλήσης.",
-        "image": "img/v24/el/phone_input.png"
-      },
-      {
-        "text": "Ενοποιημένες Φόρμες Δημιουργίας Παρεμβάσεων",
-        "description": "Η διεπαφή χρήστη συγχωνεύει πλέον την παλιά ροή εργασίας παρεμβάσεων δύο βημάτων σε μια ενιαία, ενοποιημένη και γρήγορη φόρμα δημιουργίας.",
-        "image": "img/v24/el/intervention_form.png"
-      }
-    ],
-    "regressions_alertes": [
-      {
-        "text": "Μόνιμη Κατάργηση του Παλιού Προτύπου Τιμολογίου 'Crabe'",
-        "description": "Το παρωχημένο πρότυπο τιμολογίου PDF 'Crabe' αφαιρέθηκε εντελώς από τον πυρήνα. Χρησιμοποιήστε το 'Sponge''. Τα προσαρμοσμένα πρότυπα PDF σας δεν επηρεάζονται.",
-        "image": null
-      },
-      {
-        "text": "Πλήρης Κατάργηση του Module Πληρωμών Paybox",
-        "description": "Το Paybox δεν περιλαμβάνεται πλέον στον πυρήνα του Dolibarr. Συνιστούμε ανεπιφύλακτα τη μετάβαση σε σύγχρονες πύλες πληρωμών όπως το Stripe ή το PayPal.",
-        "image": null
-      }
-    ]
-  }
+    }
+  ]
 }

@@ -1,8 +1,11 @@
 {
   "version": "v23",
   "links": {
-    "github": null,
-    "youtube": []
+    "github": "https://github.com/Dolibarr/dolibarr/releases/tag/23.0.3",
+    "youtube": [
+      "https://youtu.be/mafLZU41xlA?si=Xp5hv25lEE1frU4Q",
+      "https://youtu.be/5qIHxPlKrH4?si=gzKxFlT5ziDKSkU5"
+    ]
   },
   "changes": [
     {
@@ -28,6 +31,10 @@
         "es": {
           "title": "Actualización Técnica Global",
           "description": "Dolibarr ahora requiere estrictamente un entorno mínimo de PHP 7.2 para funcionar, garantizando un mejor rendimiento y mayor seguridad."
+        },
+        "el": {
+          "title": "Γενική Τεχνική Αναβάθμιση",
+          "description": "Το Dolibarr απαιτεί πλέον αυστηρά την έκδοση PHP 7.2 ως ελάχιστη προϋπόθεση, ώστε να εγγυάται καλύτερες επιδόσεις και σύγχρονη ασφάλεια στην πλατφόρμα."
         }
       }
     },
@@ -42,7 +49,8 @@
       "images": {
         "fr": "img/v23/fr/datapolicy.png",
         "en": "img/v23/en/datapolicy.png",
-        "es": "img/v23/es/datapolicy.png"
+        "es": "img/v23/es/datapolicy.png",
+        "el": "img/v23/el/datapolicy.png"
       },
       "translations": {
         "fr": {
@@ -56,6 +64,10 @@
         "es": {
           "title": "Evolución del Módulo DataPolicy",
           "description": "La herramienta de gestión de políticas de datos pasa a estado estable, ofreciendo opciones avanzadas de anonimización y gestión de políticas de contratación."
+        },
+        "el": {
+          "title": "Εξέλιξη του Module DataPolicy",
+          "description": "Το εργαλείο διαχείρισης της πολιτικής δεδομένων(GDPR) μεταφέρθηκε σε σταθερή (stable) κατάσταση, εισάγοντας προηγμένες λειτουργίες ανωνυμοποίησης και ρυθμίσεις πολιτικής προσλήψεων."
         }
       }
     },
@@ -70,7 +82,8 @@
       "images": {
         "fr": "img/v23/fr/accounting_payments.png",
         "en": "img/v23/en/accounting_payments.png",
-        "es": "img/v23/es/accounting_payments.png"
+        "es": "img/v23/es/accounting_payments.png",
+        "el": "img/v23/el/accounting_payments.png"
       },
       "translations": {
         "fr": {
@@ -84,6 +97,10 @@
         "es": {
           "title": "Contabilidad por Tipo de Pago",
           "description": "Una nueva funcionalidad permite segmentar los asientos contables y diarios directamente en función de las formas de pago utilizadas."
+        },
+        "el": {
+          "title": "Λογιστική ανά Τύπο Πληρωμής",
+          "description": "Μια ολοκαίνουργια επιλογή επιτρέπει στους χρήστες να κατηγοριοποιούν τις γραμμές του καθολικού και τα λογιστικά ημερολόγια με βάση συγκεκριμένες μεθόδους πληρωμής."
         }
       }
     },
@@ -110,6 +127,10 @@
         "es": {
           "title": "Soporte Contable para Descuentos",
           "description": "El sistema ahora incorpora de forma nativa la asignación y el control contable específico para los descuentos aplicados."
+        },
+        "el": {
+          "title": "Λογιστική Αποτύπωση Εκπτώσεων",
+          "description": "Το σύστημα υποστηρίζει πλέον εγγενώς μια λογιστική παραμετροποίηση και κατανομή καθολικού για τις εκπτώσεις πελατών."
         }
       }
     },
@@ -136,6 +157,10 @@
         "es": {
           "title": "Conciliación en Cuentas Contables Generales",
           "description": "Se añaden las estructuras de base de datos necesarias para permitir rutinas de conciliación directamente en cuentas de contabilidad general."
+        },
+        "el": {
+          "title": "Γενική Λογιστική Συμφωνία",
+          "description": "Προστέθηκαν απαραίτητες δομές στη βάση δεδομένων για την ενεργοποίηση εγγενών διαδικασιών συμφωνίας (reconciliation) απευθείας στους λογαριασμούς του γενικού καθολικού."
         }
       }
     },
@@ -150,7 +175,8 @@
       "images": {
         "fr": "img/v23/fr/invoice_balance_pdf.png",
         "en": "img/v23/en/invoice_balance_pdf.png",
-        "es": "img/v23/es/invoice_balance_pdf.png"
+        "es": "img/v23/es/invoice_balance_pdf.png",
+        "el": "img/v23/el/invoice_balance_pdf.png"
       },
       "translations": {
         "fr": {
@@ -164,6 +190,10 @@
         "es": {
           "title": "Visualización del Saldo del Cliente en PDF",
           "description": "Es posible configurar las facturas impresas para que muestren de forma automática el saldo pendiente actual del cliente en la propia fecha de emisión."
+        },
+        "el": {
+          "title": "Εμφάνιση Υπολοίπου Πελάτη στα Τιμολόγια PDF",
+          "description": "Μπορείτε πλέον να ρυθμίσετε τη δημιουργία PDF ώστε να εκτυπώνεται αυτόματα το τρέχον οφειλόμενο υπόλοιπο του πελάτη απευθείας στο έγγραφο του τιμολογίου."
         }
       }
     },
@@ -190,6 +220,10 @@
         "es": {
           "title": "Error al Validar Productos fuera de Venta/Compra",
           "description": "Dolibarr bloqueará la validación e indicará un error si un presupuesto, pedido o documento de proveedor contiene un artículo que ya no está disponible para la venta o compra."
+        },
+        "el": {
+          "title": "Σφάλμα Επικύρωσης για Προϊόντα Εκτός Πώλησης",
+          "description": "Το Dolibarr θα μπλοκάρει πλέον την επικύρωση και θα εμφανίζει σφάλμα εάν μια προσφορά, μια παραγγελία ή ένα έγγραφο προμηθευτή περιέχει ένα στοιχείο που δεν είναι πλέον σημασμένο για πώληση ή αγορά."
         }
       }
     },
@@ -204,7 +238,8 @@
       "images": {
         "fr": "img/v23/fr/standalone_shipment.png",
         "en": "img/v23/en/standalone_shipment.png",
-        "es": "img/v23/es/standalone_shipment.png"
+        "es": "img/v23/es/standalone_shipment.png",
+        "el": "img/v23/el/standalone_shipment.png"
       },
       "translations": {
         "fr": {
@@ -218,6 +253,10 @@
         "es": {
           "title": "Creación de Envíos y Recepciones Autónomas",
           "description": "Ahora puede generar registros de recepción o albaranes de envío de forma totalmente independiente, sin necesidad de un documento origen."
+        },
+        "el": {
+          "title": "Αυτόνομες Αποστολές και Παραλαβές",
+          "description": "Μπορείτε πλέον να δημιουργείτε απευθείας αρχεία παραλαβής ή αποστολές προϊόντων αυτόνομα, χωρίς να απαιτείται ένα αρχικό εμπορικό έγγραφο."
         }
       }
     },
@@ -232,7 +271,8 @@
       "images": {
         "fr": "img/v23/fr/shipment_sign.png",
         "en": "img/v23/en/shipment_sign.png",
-        "es": "img/v23/es/shipment_sign.png"
+        "es": "img/v23/es/shipment_sign.png",
+        "el": "img/v23/el/shipment_sign.png"
       },
       "translations": {
         "fr": {
@@ -246,6 +286,10 @@
         "es": {
           "title": "Soporte de Firma Digital en Envíos",
           "description": "El flujo de expediciones se actualiza con una funcionalidad de captura de firma para validar las entregas de material de forma electrónica."
+        },
+        "el": {
+          "title": "Υποστήριξη Ψηφιακής Υπογραφής στις Αποστολές",
+          "description": "Η ροή των αποστολών παρέχει πλέον ένα εργαλείο καταγραφής υπογραφής για την ηλεκτρονική υπογραφή των δελτίων παράδοσης."
         }
       }
     },
@@ -272,6 +316,10 @@
         "es": {
           "title": "Actualización de Estándares Incoterms 2025",
           "description": "Se han actualizado las definiciones de códigos Incoterms para cumplir con la normativa oficial de 2025, incorporando nuevos términos comerciales."
+        },
+        "el": {
+          "title": "Ενημέρωση Προτύπων Incoterms 2025",
+          "description": "Οι όροι Incoterms ενημερώθηκαν για να συμμορφώνονται πλήρως με τους επίσημους ορισμούς του 2025, παράλληλα με την εισαγωγή νέων παγκόσμιων όρων."
         }
       }
     },
@@ -298,6 +346,10 @@
         "es": {
           "title": "Configuración del Menú de Parte de Horas (Timesheet)",
           "description": "Se ha añadido un parámetro global para establecer una ruta o menú de acceso por defecto a las hojas de tiempo de los usuarios."
+        },
+        "el": {
+          "title": "Προσαρμογή Προεπιλεγμένου Μενού Timesheet",
+          "description": "Μια νέα γενική παράμετρος έχει εφαρμοστεί για τον καθορισμό μιας προσαρμοσμένης προεπιλεγμένης διαδρομής πλοήγησης για τα φύλλα χρονοχρέωσης (timesheets) των χρηστών."
         }
       }
     },
@@ -312,7 +364,8 @@
       "images": {
         "fr": "img/v23/fr/holiday_history.png",
         "en": "img/v23/en/holiday_history.png",
-        "es": "img/v23/es/holiday_history.png"
+        "es": "img/v23/es/holiday_history.png",
+        "el": "img/v23/el/holiday_history.png"
       },
       "translations": {
         "fr": {
@@ -326,6 +379,10 @@
         "es": {
           "title": "Filtros y Registro Histórico de Vacaciones",
           "description": "Listados de saldos de vacaciones mejorados con ordenación por empleado y un acceso directo para consultar el historial de modificaciones."
+        },
+        "el": {
+          "title": "Φιλτράρισμα Αδειών Υπαλλήλων & Σύνδεσμοι Ιστορικού",
+          "description": "Βελτιωμένες λίστες υπολοίπων αδειών που διαθέτουν εγγενές φιλτράρισμα υπαλλήλων και έναν γρήγορο σύνδεσμο για την επιθεώρηση των αρχείων καταγραφής τροποποίησης του υπολοίπου αδείας."
         }
       }
     },
@@ -340,7 +397,8 @@
       "images": {
         "fr": "img/v23/fr/object_agenda.png",
         "en": "img/v23/en/object_agenda.png",
-        "es": "img/v23/es/object_agenda.png"
+        "es": "img/v23/es/object_agenda.png",
+        "el": "img/v23/el/object_agenda.png"
       },
       "translations": {
         "fr": {
@@ -354,6 +412,10 @@
         "es": {
           "title": "Pestañas de Agenda y Mensajería Integradas",
           "description": "Las pestañas de 'Mensajería' y 'Agenda' se integran directamente en las fichas de pedidos, envíos y presupuestos para centralizar las comunicaciones."
+        },
+        "el": {
+          "title": "Ενσωματωμένες Καρτέλες Μηνυμάτων Αντικειμένου και Ατζέντας",
+          "description": "Οι καρτέλες \"Μηνύματα\" και \"Ατζέντα\" ενσωματώνονται πλέον στις καρτέλες παραγγελιών, αποστολών και προτάσεων για τη συγκέντρωση του ιστορικού του πελάτη."
         }
       }
     },
@@ -368,7 +430,8 @@
       "images": {
         "fr": "img/v23/fr/kanban_logo.png",
         "en": "img/v23/en/kanban_logo.png",
-        "es": "img/v23/es/kanban_logo.png"
+        "es": "img/v23/es/kanban_logo.png",
+        "el": "img/v23/el/kanban_logo.png"
       },
       "translations": {
         "fr": {
@@ -382,6 +445,10 @@
         "es": {
           "title": "Logotipo de Empresa en la Vista Kanban",
           "description": "La vista de tarjetas en columnas (Kanban) se rediseña para mostrar de manera visual el logotipo de las empresas asociadas."
+        },
+        "el": {
+          "title": "Εμφάνιση Λογοτύπου Εταιρείας στις Προβολές Kanban",
+          "description": "Η διάταξη της προβολής του πίνακα kanban έχει επανασχεδιαστεί ώστε να εμφανίζει ορατά τα λογότυπα των εταιρειών στις κάρτες των ενεργών στοιχείων."
         }
       }
     },
@@ -408,6 +475,10 @@
         "es": {
           "title": "Mejoras en el Portal Web de Clientes",
           "description": "El portal externo amplía sus funciones añadiendo un explorador de directorios compartidos y descarga de documentos enlazados a fichas de terceros."
+        },
+        "el": {
+          "title": "Βελτιωμένες Λειτουργίες του Web Portal Πελατών",
+          "description": "Το portal πελατών επεκτείνει τις δυνατότητές του με έναν ενσωματωμένο πλοηγό κοινόχρηστου καταλόγου και άμεση πρόσβαση σε συνδεδεμένα έγγραφα τρίτων."
         }
       }
     },
@@ -422,7 +493,8 @@
       "images": {
         "fr": "img/v23/fr/crm_funnel.png",
         "en": "img/v23/en/crm_funnel.png",
-        "es": "img/v23/es/crm_funnel.png"
+        "es": "img/v23/es/crm_funnel.png",
+        "el": "img/v23/el/crm_funnel.png"
       },
       "translations": {
         "fr": {
@@ -436,6 +508,10 @@
         "es": {
           "title": "Widget de Embudo de Conversión de Oportunidades",
           "description": "Un nuevo gráfico en forma de embudo está disponible para el panel de control, permitiendo un seguimiento visual del estado de las oportunidades CRM."
+        },
+        "el": {
+          "title": "Widget Χωνιού Μετατροπής Ευκαιριών",
+          "description": "Ένα καθαρό γραφικό widget χοάνης μετατροπής είναι πλέον διαθέσιμο για τον πίνακα ελέγχου σας, για την αποτελεσματική παρακολούθηση των ευκαιριών CRM."
         }
       }
     },
@@ -462,6 +538,10 @@
         "es": {
           "title": "Lógica Invertida en la Fecha por Defecto",
           "description": "Se ha invertido el comportamiento en la creación de documentos: ahora el sistema requiere una configuración específica si no desea rellenar automáticamente la fecha actual."
+        },
+        "el": {
+          "title": "Αντεστραμμένη Λογική Επικύρωσης Ημερομηνίας Δημιουργίας",
+          "description": "Η επεξεργασία προσφορών, παραγγελιών και τιμολογίων έχει αντιστρέψει τη λογική αυτόματης συμπλήρωσης ημερομηνίας: απαιτείται πλέον επιλογή για να ΜΗΝ συμπληρώνεται αυτόματα η σημερινή ημερομηνία."
         }
       }
     },
@@ -488,112 +568,12 @@
         "es": {
           "title": "Restricción de Código PHP en el Módulo Sitios Web",
           "description": "Si utiliza scripts PHP personalizados en sus páginas del módulo CMS, es obligatorio añadir una variable de seguridad específica en su archivo de configuración para conservar permisos de edición."
+        },
+        "el": {
+          "title": "Περιορισμός Custom PHP Μέσα στο Module Ιστοσελίδας",
+          "description": "Εάν φιλοξενείτε προσαρμοσμένα σενάρια PHP(scripts) μέσω του module CMS/Website, πρέπει να προσθέσετε χειροκίνητα μια νέα επιλογή ασφαλείας στο αρχείο ρυθμίσεών σας για να διατηρήσετε τα δικαιώματα επεξεργασίας."
         }
       }
-    ]
-  },
-  "el": {
-    "ia_innovation": [
-      {
-        "text": "Γενική Τεχνική Αναβάθμιση",
-        "description": "Το Dolibarr απαιτεί πλέον αυστηρά την έκδοση PHP 7.2 ως ελάχιστη προϋπόθεση, ώστε να εγγυάται καλύτερες επιδόσεις και σύγχρονη ασφάλεια στην πλατφόρμα.",
-        "image": null
-      },
-      {
-        "text": "Εξέλιξη του Module DataPolicy",
-        "description": "Το εργαλείο διαχείρισης της πολιτικής δεδομένων(GDPR) μεταφέρθηκε σε σταθερή (stable) κατάσταση, εισάγοντας προηγμένες λειτουργίες ανωνυμοποίησης και ρυθμίσεις πολιτικής προσλήψεων.",
-        "image": "img/v23/el/datapolicy.png"
-      }
-    ],
-    "compta_facturation": [
-      {
-        "text": "Λογιστική ανά Τύπο Πληρωμής",
-        "description": "Μια ολοκαίνουργια επιλογή επιτρέπει στους χρήστες να κατηγοριοποιούν τις γραμμές του καθολικού και τα λογιστικά ημερολόγια με βάση συγκεκριμένες μεθόδους πληρωμής.",
-        "image": "img/v23/el/accounting_payments.png"
-      },
-      {
-        "text": "Λογιστική Αποτύπωση Εκπτώσεων",
-        "description": "Το σύστημα υποστηρίζει πλέον εγγενώς μια λογιστική παραμετροποίηση και κατανομή καθολικού για τις εκπτώσεις πελατών.",
-        "image": null
-      },
-      {
-        "text": "Γενική Λογιστική Συμφωνία",
-        "description": "Προστέθηκαν απαραίτητες δομές στη βάση δεδομένων για την ενεργοποίηση εγγενών διαδικασιών συμφωνίας (reconciliation) απευθείας στους λογαριασμούς του γενικού καθολικού.",
-        "image": null
-      },
-      {
-        "text": "Εμφάνιση Υπολοίπου Πελάτη στα Τιμολόγια PDF",
-        "description": "Μπορείτε πλέον να ρυθμίσετε τη δημιουργία PDF ώστε να εκτυπώνεται αυτόματα το τρέχον οφειλόμενο υπόλοιπο του πελάτη απευθείας στο έγγραφο του τιμολογίου.",
-        "image": "img/v23/el/invoice_balance_pdf.png"
-      }
-    ],
-    "ventes_logistique": [
-      {
-        "text": "Σφάλμα Επικύρωσης για Προϊόντα Εκτός Πώλησης",
-        "description": "Το Dolibarr θα μπλοκάρει πλέον την επικύρωση και θα εμφανίζει σφάλμα εάν μια προσφορά, μια παραγγελία ή ένα έγγραφο προμηθευτή περιέχει ένα στοιχείο που δεν είναι πλέον σημασμένο για πώληση ή αγορά.",
-        "image": null
-      },
-      {
-        "text": "Αυτόνομες Αποστολές και Παραλαβές",
-        "description": "Μπορείτε πλέον να δημιουργείτε απευθείας αρχεία παραλαβής ή αποστολές προϊόντων αυτόνομα, χωρίς να απαιτείται ένα αρχικό εμπορικό έγγραφο.",
-        "image": "img/v23/el/standalone_shipment.png"
-      },
-      {
-        "text": "Υποστήριξη Ψηφιακής Υπογραφής στις Αποστολές",
-        "description": "Η ροή των αποστολών παρέχει πλέον ένα εργαλείο καταγραφής υπογραφής για την ηλεκτρονική υπογραφή των δελτίων παράδοσης.",
-        "image": "img/v23/el/shipment_sign.png"
-      },
-      {
-        "text": "Ενημέρωση Προτύπων Incoterms 2025",
-        "description": "Οι όροι Incoterms ενημερώθηκαν για να συμμορφώνονται πλήρως με τους επίσημους ορισμούς του 2025, παράλληλα με την εισαγωγή νέων παγκόσμιων όρων.",
-        "image": null
-      }
-    ],
-    "rh_salaires": [
-      {
-        "text": "Προσαρμογή Προεπιλεγμένου Μενού Timesheet",
-        "description": "Μια νέα γενική παράμετρος έχει εφαρμοστεί για τον καθορισμό μιας προσαρμοσμένης προεπιλεγμένης διαδρομής πλοήγησης για τα φύλλα χρονοχρέωσης (timesheets) των χρηστών.",
-        "image": null
-      },
-      {
-        "text": "Φιλτράρισμα Αδειών Υπαλλήλων & Σύνδεσμοι Ιστορικού",
-        "description": "Βελτιωμένες λίστες υπολοίπων αδειών που διαθέτουν εγγενές φιλτράρισμα υπαλλήλων και έναν γρήγορο σύνδεσμο για την επιθεώρηση των αρχείων καταγραφής τροποποίησης του υπολοίπου αδείας.",
-        "image": "img/v23/el/holiday_history.png"
-      }
-    ],
-    "ui_ergonomie": [
-      {
-        "text": "Ενσωματωμένες Καρτέλες Μηνυμάτων Αντικειμένου και Ατζέντας",
-        "description": "Οι καρτέλες 'Μηνύματα' και 'Ατζέντα' ενσωματώνονται πλέον στις καρτέλες παραγγελιών, αποστολών και προτάσεων για τη συγκέντρωση του ιστορικού του πελάτη.",
-        "image": "img/v23/el/object_agenda.png"
-      },
-      {
-        "text": "Εμφάνιση Λογοτύπου Εταιρείας στις Προβολές Kanban",
-        "description": "Η διάταξη της προβολής του πίνακα kanban έχει επανασχεδιαστεί ώστε να εμφανίζει ορατά τα λογότυπα των εταιρειών στις κάρτες των ενεργών στοιχείων.",
-        "image": "img/v23/el/kanban_logo.png"
-      },
-      {
-        "text": "Βελτιωμένες Λειτουργίες του Web Portal Πελατών",
-        "description": "Το portal πελατών επεκτείνει τις δυνατότητές του με έναν ενσωματωμένο πλοηγό κοινόχρηστου καταλόγου και άμεση πρόσβαση σε συνδεδεμένα έγγραφα τρίτων.",
-        "image": null
-      },
-      {
-        "text": "Widget Χωνιού Μετατροπής Ευκαιριών",
-        "description": "Ένα καθαρό γραφικό widget χοάνης μετατροπής είναι πλέον διαθέσιμο για τον πίνακα ελέγχου σας, για την αποτελεσματική παρακολούθηση των ευκαιριών CRM.",
-        "image": "img/v23/el/crm_funnel.png"
-      }
-    ],
-    "regressions_alertes": [
-      {
-        "text": "Αντεστραμμένη Λογική Επικύρωσης Ημερομηνίας Δημιουργίας",
-        "description": "Η επεξεργασία προσφορών, παραγγελιών και τιμολογίων έχει αντιστρέψει τη λογική αυτόματης συμπλήρωσης ημερομηνίας: απαιτείται πλέον επιλογή για να ΜΗΝ συμπληρώνεται αυτόματα η σημερινή ημερομηνία.",
-        "image": null
-      },
-      {
-        "text": "Περιορισμός Custom PHP Μέσα στο Module Ιστοσελίδας",
-        "description": "Εάν φιλοξενείτε προσαρμοσμένα σενάρια PHP(scripts) μέσω του module CMS/Website, πρέπει να προσθέσετε χειροκίνητα μια νέα επιλογή ασφαλείας στο αρχείο ρυθμίσεών σας για να διατηρήσετε τα δικαιώματα επεξεργασίας.",
-        "image": null
-      }
-    ]
-  }
+    }
+  ]
 }

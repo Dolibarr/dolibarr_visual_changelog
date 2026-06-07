@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -194,8 +194,8 @@
     </style>
 </head>
 <body>
-    <h1 id="page-title">Nouveautés de Dolibarr</h1>
-    <p id="page-intro" class="page-intro">Parcourez les évolutions majeures de chaque version avec un affichage visuel et multilingue.</p>
+    <h1 id="page-title">Dolibarr What's New</h1>
+    <p id="page-intro" class="page-intro">Browse the major changes in each version with a visual, multilingual overview.</p>
 
     <div class="toolbar">
         <div class="select-group">
@@ -203,7 +203,7 @@
             <select id="versionSelect" onchange="loadVersionData()"></select>
         </div>
         <div class="select-group">
-            <label id="lbl-lang" for="langSelect">Langue :</label>
+            <label id="lbl-lang" for="langSelect">Language :</label>
             <select id="langSelect" onchange="renderChangelog()"></select>
         </div>
     </div>
@@ -216,18 +216,6 @@
         let currentVersionData = {};
 
         const defaultUiLabels = {
-            fr: {
-                intro: "Parcourez les évolutions majeures de chaque version avec un affichage visuel et multilingue.",
-                loading: "Chargement des nouveautés...",
-                error_loading: "Erreur : impossible de charger les données pour la version",
-                no_translation: "Aucune traduction disponible pour cette langue dans cette version.",
-                no_content: "Aucune nouveauté à afficher pour cette version.",
-                full_changelog: "Changelog complet",
-                videos: "Vidéos",
-                watch_video: "Voir la vidéo",
-                technical_id: "ID",
-                external_links: "Liens"
-            },
             en: {
                 intro: "Browse the main improvements of each release with a visual and multilingual presentation.",
                 loading: "Loading release notes...",
@@ -240,6 +228,18 @@
                 technical_id: "ID",
                 external_links: "Links"
             },
+            fr: {
+                intro: "Parcourez les évolutions majeures de chaque version avec un affichage visuel et multilingue.",
+                loading: "Chargement des nouveautés...",
+                error_loading: "Erreur : impossible de charger les données pour la version",
+                no_translation: "Aucune traduction disponible pour cette langue dans cette version.",
+                no_content: "Aucune nouveauté à afficher pour cette version.",
+                full_changelog: "Changelog complet",
+                videos: "Vidéos",
+                watch_video: "Voir la vidéo",
+                technical_id: "ID",
+                external_links: "Liens"
+            },
             es: {
                 intro: "Explore las principales novedades de cada versión con una presentación visual y multilingüe.",
                 loading: "Cargando novedades...",
@@ -251,6 +251,18 @@
                 watch_video: "Ver vídeo",
                 technical_id: "ID",
                 external_links: "Enlaces"
+            },
+            el: {
+                intro: "Περιηγηθείτε στις κύριες βελτιώσεις κάθε έκδοσης με μια οπτική και πολύγλωσση παρουσίαση.",
+                loading: "Φόρτωση σημειώσεων έκδοσης...",
+                error_loading: "Σφάλμα: δεν ήταν δυνατή η φόρτωση των δεδομένων για την έκδοση",
+                no_translation: "Δεν υπάρχει διαθέσιμη μετάφραση για αυτή τη γλώσσα σε αυτή την έκδοση.",
+                no_content: "Δεν υπάρχει κάποια νέα δυνατότητα για εμφάνιση σε αυτή την έκδοση.",
+                full_changelog: "Πλήρες changelog",
+                videos: "Βίντεο",
+                watch_video: "Παρακολούθηση βίντεο",
+                technical_id: "ID",
+                external_links: "Σύνδεσμοι"
             }
         };
 
@@ -267,7 +279,7 @@
             });
 
         function getCurrentLang() {
-            return document.getElementById('langSelect').value || 'fr';
+            return document.getElementById('langSelect').value || 'en';
         }
 
         function getUiLabels(lang) {
@@ -343,7 +355,7 @@
         function normalizeOldSchema(data) {
             const changes = [];
             let order = 1;
-            const langs = Object.keys(data || {}).filter(key => ['fr', 'en', 'es'].includes(key));
+            const langs = Object.keys(data || {}).filter(key => ['en', 'fr', 'es', 'el'].includes(key));
             const firstLang = langs[0];
             if (!firstLang) return { version: '', links: { github: null, youtube: [] }, changes: [] };
 
@@ -475,7 +487,7 @@
                 section.appendChild(title);
 
                 renderableItems.forEach(item => {
-                    const localized = item.translations?.[lang] || item.translations?.fr || item.translations?.en || item.translations?.es;
+                    const localized = item.translations?.[lang] || item.translations?.en || item.translations?.fr || item.translations?.es || item.translations?.el;
                     const image = getImageForLang(item.images, lang);
                     const links = Array.isArray(item.links) ? item.links : [];
 
