@@ -1,10 +1,10 @@
 {
   "version": "v23",
   "links": {
-    "github": "https://github.com/Dolibarr/dolibarr/releases/tag/23.0.3",
+    "github": "https://github.com/Dolibarr/dolibarr/releases/tag/23.0.0",
     "youtube": [
-      "https://youtu.be/mafLZU41xlA?si=Xp5hv25lEE1frU4Q",
-      "https://youtu.be/5qIHxPlKrH4?si=gzKxFlT5ziDKSkU5"
+      { "label": "FR - Présentation nouveautés v23", "url": "https://youtu.be/mafLZU41xlA?si=Xp5hv25lEE1frU4Q" },
+      { "label": "FR - Présentation nouveautés comptabilité v23", "url": "https://youtu.be/5qIHxPlKrH4?si=gzKxFlT5ziDKSkU5" }
     ]
   },
   "changes": [
